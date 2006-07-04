@@ -1,0 +1,61 @@
+AC_PREREQ(2.59)
+AC_INIT([Atomato], [2.15.1], [http://bugzilla.gnome.org/enter_bug.cgi?product=atomato], [atomato])
+AC_CONFIG_SRCDIR([libatomato/atomato.c])
+
+dnl Useful to call aclocal after 'make'
+AC_SUBST(ACLOCAL_AMFLAGS, "$ACLOCAL_FLAGS")
+
+AC_CONFIG_HEADERS([config.h])
+AM_INIT_AUTOMAKE([1.9 foreign])
+AM_MAINTAINER_MODE
+
+IT_PROG_INTLTOOL([0.11])
+
+AC_ISC_POSIX
+AC_PROG_CC
+AC_HEADER_STDC([])
+AM_PROG_LIBTOOL
+
+GNOME_COMPILE_WARNINGS(yes)
+CFLAGS="$CFLAGS $WARN_CFLAGS"
+
+dnl ******************************************
+dnl ** pkg-config dependacy checks          **
+dnl ******************************************
+
+
+GTK_REQUIRED=2.5.4
+LIBGLADE_REQUIRED=2.0.0
+GCONF_REQUIRED=1.1.11
+DBUS_REQUIRED=0.60
+
+PKG_CHECK_MODULES(ATOMATO, 
+		  gtk+-2.0       >= $GTK_REQUIRED 
+		  libglade-2.0   >= $LIBGLADE_REQUIRED 
+		  gconf-2.0      >= $GCONF_REQUIRED
+		  libxml-2.0
+		  dbus-glib-1	 >= $DBUS_REQUIRED)
+AC_SUBST(ATOMATO_CFLAGS)
+AC_SUBST(ATOMATO_LIBS)
+
+dnl
+dnl Translations
+dnl
+GETTEXT_PACKAGE=atomato
+AC_SUBST(GETTEXT_PACKAGE)
+AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE",[The gettext package])
+ALL_LINGUAS="es"
+AM_GLIB_GNU_GETTEXT
+
+AC_SUBST(CFLAGS)
+AC_SUBST(CPPFLAGS)
+AC_SUBST(LDFLAGS)
+
+GNOME_DOC_INIT
+
+AC_CONFIG_FILES([
+Makefile
+po/Makefile.in
+libatomato/Makefile
+tests/Makefile])
+AC_OUTPUT

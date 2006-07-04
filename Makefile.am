@@ -1,0 +1,1 @@
+SUBDIRS = libatomato tests po
