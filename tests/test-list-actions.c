@@ -20,7 +20,7 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#include <libgnomeautomator/gnome-automator.h>
+#include <libatomato/atomato.h>
 
 int
 main (int argc, char **argv)
@@ -29,9 +29,9 @@ main (int argc, char **argv)
 
 	g_type_init ();
 
-	names = gnome_automator_list_actions ();
+	names = atomato_list_actions ();
 	while (names != NULL) {
-		GnomeAutomatorAction *action = names->data;
+		AtomatoAction *action = names->data;
 		g_printf ("Action: %s\n", (const gchar *) action->name);
 		names = names->next;
 	}

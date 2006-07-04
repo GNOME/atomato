@@ -23,7 +23,7 @@
 #include <string.h>
 #include <libxml/tree.h>
 #include <dbus/dbus-glib.h>
-#include <gnome-automator.h>
+#include <atomato.h>
 #include "dbus-action-provider.h"
 
 struct _DbusActionProviderPrivate {
@@ -43,22 +43,22 @@ parse_xml_interface (DbusActionProvider *dbus_provider, xmlNodePtr xml_node)
 	xmlNodePtr subnode, arg_node;
 
 	for (subnode = xml_node->xmlChildrenNode; subnode != NULL; subnode = subnode->next) {
-		GnomeAutomatorAction *action;
+		AtomatoAction *action;
 
 		if (strcmp ((char *) subnode->name, "method"))
 			continue;
 
-		action = g_new0 (GnomeAutomatorAction, 1);
+		action = g_new0 (AtomatoAction, 1);
 		action->name = g_strdup (xmlGetProp (subnode, "name"));
 
 		for (arg_node = subnode->xmlChildrenNode; arg_node != NULL;
 		     arg_node = arg_node->next) {
-			GnomeAutomatorActionArgument *argument;
+			AtomatoActionArgument *argument;
 
 			if (strcmp ((char *) arg_node->name, "arg"))
 				continue;
 
-			argument = g_new0 (GnomeAutomatorActionArgument, 1);
+			argument = g_new0 (AtomatoActionArgument, 1);
 			argument->name = g_strdup (xmlGetProp (arg_node, "name"));
 			argument->direction = g_strdup (xmlGetProp (arg_node, "direction"));
 			argument->type = g_strdup (xmlGetProp (arg_node, "type"));
@@ -153,7 +153,7 @@ hash_to_slist (gpointer key, gpointer value, gpointer user_data)
 }
 
 static GSList *
-dbus_action_provider_list_actions (GnomeAutomatorActionProvider *provider)
+dbus_action_provider_list_actions (AtomatoActionProvider *provider)
 {
 	GSList *list = NULL;
 	DbusActionProvider *dbus_provider = (DbusActionProvider *) provider;
@@ -174,7 +174,7 @@ dbus_action_provider_list_actions (GnomeAutomatorActionProvider *provider)
 }
 
 static GValueArray *
-dbus_action_provider_run_action (GnomeAutomatorActionProvider *provider,
+dbus_action_provider_run_action (AtomatoActionProvider *provider,
 				 const gchar *action_name,
 				 const GValueArray *input_args)
 {
@@ -184,7 +184,7 @@ dbus_action_provider_run_action (GnomeAutomatorActionProvider *provider,
 static void
 dbus_action_provider_interface_init (gpointer g_iface, gpointer iface_data)
 {
-	GnomeAutomatorActionProviderInterface *iface = (GnomeAutomatorActionProviderInterface *) g_iface;
+	AtomatoActionProviderInterface *iface = (AtomatoActionProviderInterface *) g_iface;
 
 	iface->list_actions = dbus_action_provider_list_actions;
 	iface->run_action = dbus_action_provider_run_action;
@@ -285,7 +285,7 @@ dbus_action_provider_get_type (void)
 		};
 
 		type = g_type_register_static (G_TYPE_OBJECT, "DbusActionProvider", &info, 0);
-		g_type_add_interface_static (type, GNOME_AUTOMATOR_TYPE_ACTION_PROVIDER, &iap_info);
+		g_type_add_interface_static (type, ATOMATO_TYPE_ACTION_PROVIDER, &iap_info);
 	}
 
 	return type;

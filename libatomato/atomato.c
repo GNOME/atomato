@@ -20,7 +20,7 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#include "gnome-automator.h"
+#include "atomato.h"
 #include "dbus-action-provider.h"
 
 static GSList *action_providers = NULL;
@@ -39,7 +39,7 @@ initialize (void)
  *
  */
 GSList *
-gnome_automator_list_actions (void)
+atomato_list_actions (void)
 {
 	GSList *sl, *all_names = NULL;
 
@@ -48,7 +48,7 @@ gnome_automator_list_actions (void)
 	for (sl = action_providers; sl != NULL; sl = sl->next) {
 		GSList *names;
 
-		names = gnome_automator_action_provider_list_actions (GNOME_AUTOMATOR_ACTION_PROVIDER (sl->data));
+		names = atomato_action_provider_list_actions (ATOMATO_ACTION_PROVIDER (sl->data));
 		if (names)
 			all_names = g_slist_concat (all_names, names);
 	}

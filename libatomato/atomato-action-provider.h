@@ -20,39 +20,39 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#ifndef __GNOME_AUTOMATOR_ACTION_PROVIDER_H__
-#define __GNOME_AUTOMATOR_ACTION_PROVIDER_H__
+#ifndef __ATOMATO_ACTION_PROVIDER_H__
+#define __ATOMATO_ACTION_PROVIDER_H__
 
 #include <glib-object.h>
 
 G_BEGIN_DECLS
 
-#define GNOME_AUTOMATOR_TYPE_ACTION_PROVIDER                (gnome_automator_action_provider_get_type ())
-#define GNOME_AUTOMATOR_ACTION_PROVIDER(obj)                (G_TYPE_CHECK_INSTANCE_CAST ((obj), GNOME_AUTOMATOR_TYPE_ACTION_PROVIDER, GnomeAutomatorActionProvider))
-#define GNOME_AUTOMATOR_IS_ACTION_PROVIDER(obj)             (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GNOME_AUTOMATOR_TYPE_ACTION_PROVIDER))
-#define GNOME_AUTOMATOR_ACTION_PROVIDER_GET_INTERFACE(inst) (G_TYPE_INSTANCE_GET_INTERFACE ((inst), GNOME_AUTOMATOR_TYPE_ACTION_PROVIDER, GnomeAutomatorActionProviderInterface))
+#define ATOMATO_TYPE_ACTION_PROVIDER                (atomato_action_provider_get_type ())
+#define ATOMATO_ACTION_PROVIDER(obj)                (G_TYPE_CHECK_INSTANCE_CAST ((obj), ATOMATO_TYPE_ACTION_PROVIDER, AtomatoActionProvider))
+#define ATOMATO_IS_ACTION_PROVIDER(obj)             (G_TYPE_CHECK_INSTANCE_TYPE ((obj), ATOMATO_TYPE_ACTION_PROVIDER))
+#define ATOMATO_ACTION_PROVIDER_GET_INTERFACE(inst) (G_TYPE_INSTANCE_GET_INTERFACE ((inst), ATOMATO_TYPE_ACTION_PROVIDER, AtomatoActionProviderInterface))
 
-typedef struct _GnomeAutomatorActionProvider GnomeAutomatorActionProvider;
-typedef struct _GnomeAutomatorActionProviderInterface GnomeAutomatorActionProviderInterface;
+typedef struct _AtomatoActionProvider AtomatoActionProvider;
+typedef struct _AtomatoActionProviderInterface AtomatoActionProviderInterface;
 
-struct _GnomeAutomatorActionProvider {
+struct _AtomatoActionProvider {
 };
 
-struct _GnomeAutomatorActionProviderInterface {
+struct _AtomatoActionProviderInterface {
 	GTypeInterface parent;
 
-	GSList * (* list_actions) (GnomeAutomatorActionProvider *provider);
-	GValueArray * (* run_action) (GnomeAutomatorActionProvider *provider,
+	GSList * (* list_actions) (AtomatoActionProvider *provider);
+	GValueArray * (* run_action) (AtomatoActionProvider *provider,
 				      const gchar *action_name,
 				      const GValueArray *input_args);
 };
 
-GType        gnome_automator_action_provider_get_type (void);
+GType        atomato_action_provider_get_type (void);
 
-GSList      *gnome_automator_action_provider_list_actions (GnomeAutomatorActionProvider *provider);
-GValueArray *gnome_automator_action_provider_run_action (GnomeAutomatorActionProvider *provider,
-							 const gchar *action_name,
-							 const GValueArray *input_args);
+GSList      *atomato_action_provider_list_actions (AtomatoActionProvider *provider);
+GValueArray *atomato_action_provider_run_action (AtomatoActionProvider *provider,
+						 const gchar *action_name,
+						 const GValueArray *input_args);
 
 G_END_DECLS
 

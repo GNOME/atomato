@@ -20,8 +20,8 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#ifndef __GNOME_AUTOMATOR_H__
-#define __GNOME_AUTOMATOR_H__
+#ifndef __ATOMATO_H__
+#define __ATOMATO_H__
 
 #include <glib-object.h>
 
@@ -31,14 +31,14 @@ typedef struct {
 	char *name;
 	char *direction;
 	char *type;
-} GnomeAutomatorActionArgument;
+} AtomatoActionArgument;
 
 typedef struct {
 	char *name;
 	GList *args;
-} GnomeAutomatorAction;
+} AtomatoAction;
 
-GSList *gnome_automator_list_actions (void);
+GSList *atomato_list_actions (void);
 
 G_END_DECLS
 

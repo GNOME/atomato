@@ -23,7 +23,7 @@
 #ifndef __DBUS_ACTION_PROVIDER_H__
 #define __DBUS_ACTION_PROVIDER_H__
 
-#include "gnome-automator-action-provider.h"
+#include "atomato-action-provider.h"
 
 #define DBUS_TYPE_ACTION_PROVIDER             (dbus_action_provider_get_type ())
 #define DBUS_ACTION_PROVIDER(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), DBUS_TYPE_ACTION_PROVIDER, DbusActionProvider))

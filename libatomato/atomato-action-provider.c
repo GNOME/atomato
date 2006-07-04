@@ -20,10 +20,10 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#include "gnome-automator-action-provider.h"
+#include "atomato-action-provider.h"
 
 static void
-gnome_automator_action_provider_base_init (gpointer g_class)
+atomato_action_provider_base_init (gpointer g_class)
 {
 	static gboolean initialized = FALSE;
 
@@ -34,14 +34,14 @@ gnome_automator_action_provider_base_init (gpointer g_class)
 }
 
 GType
-gnome_automator_action_provider_get_type (void)
+atomato_action_provider_get_type (void)
 {
 	static GType type = 0;
 
 	if (type == 0) {
 		static const GTypeInfo info = {
-			sizeof (GnomeAutomatorActionProviderInterface),
-			gnome_automator_action_provider_base_init,   /* base_init */
+			sizeof (AtomatoActionProviderInterface),
+			atomato_action_provider_base_init,   /* base_init */
 			NULL,   /* base_finalize */
 			NULL,   /* class_init */
 			NULL,   /* class_finalize */
@@ -50,28 +50,28 @@ gnome_automator_action_provider_get_type (void)
 			0,      /* n_preallocs */
 			NULL    /* instance_init */
 		};
-		type = g_type_register_static (G_TYPE_INTERFACE, "GnomeAutomatorActionProvider", &info, 0);
+		type = g_type_register_static (G_TYPE_INTERFACE, "AtomatoActionProvider", &info, 0);
 	}
 
 	return type;
 }
 
 /**
- * gnome_automator_action_provider_list_actions:
+ * atomato_action_provider_list_actions:
  * @provider: An action provider.
  *
  * Queries a specific action provider implementation for the list of actions available.
  *
- * Return value: A GSList of #GnomeAutomatorAction.
+ * Return value: A GSList of #AtomatoAction.
  */
 GSList *
-gnome_automator_action_provider_list_actions (GnomeAutomatorActionProvider *provider)
+atomato_action_provider_list_actions (AtomatoActionProvider *provider)
 {
-	return GNOME_AUTOMATOR_ACTION_PROVIDER_GET_INTERFACE (provider)->list_actions (provider);
+	return ATOMATO_ACTION_PROVIDER_GET_INTERFACE (provider)->list_actions (provider);
 }
 
 /**
- * gnome_automator_action_provider_run_action:
+ * atomato_action_provider_run_action:
  * @provider: An action provider.
  * @action_name: The name of the action to be executed.
  * @input_args: Input arguments.
@@ -81,9 +81,9 @@ gnome_automator_action_provider_list_actions (GnomeAutomatorActionProvider *prov
  * Return value: An array with all output values returned from the action.
  */
 GValueArray *
-gnome_automator_action_provider_run_action (GnomeAutomatorActionProvider *provider,
-					    const gchar *action_name,
-					    const GValueArray *input_args)
+atomato_action_provider_run_action (AtomatoActionProvider *provider,
+				    const gchar *action_name,
+				    const GValueArray *input_args)
 {
-	return GNOME_AUTOMATOR_ACTION_PROVIDER_GET_INTERFACE (provider)->run_action (provider, action_name, input_args);
+	return ATOMATO_ACTION_PROVIDER_GET_INTERFACE (provider)->run_action (provider, action_name, input_args);
 }
