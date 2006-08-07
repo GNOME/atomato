@@ -1,0 +1,41 @@
+# Swedish translation of atomato.
+# Copyright (C) 2006 Free Software Foundation, Inc.
+# Christian Rose <menthos@menthos.com>, 2006.
+#
+# $Id$
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: atomato\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-08-07 18:19+0200\n"
+"PO-Revision-Date: 2006-08-07 18:24+0200\n"
+"Last-Translator: Christian Rose <menthos@menthos.com>\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/gnome-automator.glade.h:1
+msgid "GNOME Automator"
+msgstr "GNOME-automatiserare"
+
+#: src/gnome-automator.glade.h:2
+msgid "_About"
+msgstr "_Om"
+
+#: src/gnome-automator.glade.h:3
+msgid "_Edit"
+msgstr "_Redigera"
+
+#: src/gnome-automator.glade.h:4
+msgid "_File"
+msgstr "_Arkiv"
+
+#: src/gnome-automator.glade.h:5
+msgid "_Help"
+msgstr "_Hjälp"
+
+#: src/gnome-automator.glade.h:6
+msgid "_View"
+msgstr "_Visa"
