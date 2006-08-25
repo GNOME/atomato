@@ -1,0 +1,41 @@
+# French translation of atomato.
+# Copyright (C) 2006 Free Software Foundation, Inc.
+# This file is distributed under the same license as the atomato package.
+#
+# Robert-André Mauchin <zebob.m@gmail.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: atomato 2.15.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-08-25 20:38+0200\n"
+"PO-Revision-Date: 2006-08-25 20:38+0200\n"
+"Last-Translator: Robert-André Mauchin <zebob.m@gmail.com>\n"
+"Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/gnome-automator.glade.h:1
+msgid "GNOME Automator"
+msgstr "GNOME Automator"
+
+#: ../src/gnome-automator.glade.h:2
+msgid "_About"
+msgstr "À _propos"
+
+#: ../src/gnome-automator.glade.h:3
+msgid "_Edit"
+msgstr "É_dition"
+
+#: ../src/gnome-automator.glade.h:4
+msgid "_File"
+msgstr "_Fichier"
+
+#: ../src/gnome-automator.glade.h:5
+msgid "_Help"
+msgstr "_Aide"
+
+#: ../src/gnome-automator.glade.h:6
+msgid "_View"
+msgstr "Afficha_ge"
