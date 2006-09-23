@@ -1,0 +1,40 @@
+# The Bengali translation for atomato.
+# Copyright (C) 2003 Free Software Foundation, Inc.
+# This file is distributed under the same license as the atomato package.
+# Khandakar Mujahidul Islam <suzan@bengalinux.org>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: HEAD \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-09-23 20:43+0600\n"
+"PO-Revision-Date: 2006-09-23 20:34+0600\n"
+"Last-Translator: Khandakar Mujahidul Islam <suzan@bengalinux.org>\n"
+"Language-Team: Bengali <gnome-translation@bengalinux.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/gnome-automator.glade.h:1
+msgid "GNOME Automator"
+msgstr "গনোম স্বয়ংক্রিয়কারী"
+
+#: ../src/gnome-automator.glade.h:2
+msgid "_About"
+msgstr "পরিচিতি (_প)"
+
+#: ../src/gnome-automator.glade.h:3
+msgid "_Edit"
+msgstr "সম্পাদনা (_স)"
+
+#: ../src/gnome-automator.glade.h:4
+msgid "_File"
+msgstr "ফাইল (_ফ)"
+
+#: ../src/gnome-automator.glade.h:5
+msgid "_Help"
+msgstr "সহায়িকা (_স)"
+
+#: ../src/gnome-automator.glade.h:6
+msgid "_View"
+msgstr "প্রদর্শন (_দ)"
