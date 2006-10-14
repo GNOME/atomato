@@ -1,3 +1,7 @@
+2006-10-14  Ilkka Tuohela  <hile@iki.fi>
+
+	* configure.in: Added "fi" to ALL_LINGUAS.
+
 2006-10-02  Josep Puigdemont i Casamajó  <josep.puigdemont@gmail.com>
 
 	* configure.in: Added "ca" to ALL_LINGUAS.
