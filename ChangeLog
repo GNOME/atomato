@@ -1,3 +1,7 @@
+2006-10-27  Wouter Bolsterlee  <wbolster@cvs.gnome.org>
+
+	* configure.in: Added "nl" to ALL_LINGUAS.
+
 2006-10-14  Ilkka Tuohela  <hile@iki.fi>
 
 	* configure.in: Added "fi" to ALL_LINGUAS.

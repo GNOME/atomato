@@ -1,0 +1,40 @@
+# Atomato, Dutch translation
+# This file is distributed under the same license as the atomato package.
+#
+# Wouter Bolsterlee <wbolster@gnome.org>, 2006"
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: atomato\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-10-27 14:55+0200\n"
+"PO-Revision-Date: 2006-10-27 14:55+0200 \n"
+"Last-Translator: Wouter Bolsterlee <wbolster@gnome.org>\n"
+"Language-Team: Gnome-NL <gnome-nl-list@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/gnome-automator.glade.h:1
+msgid "GNOME Automator"
+msgstr "Gnome Automator"
+
+#: ../src/gnome-automator.glade.h:2
+msgid "_About"
+msgstr "In_fo"
+
+#: ../src/gnome-automator.glade.h:3
+msgid "_Edit"
+msgstr "Be_werken"
+
+#: ../src/gnome-automator.glade.h:4
+msgid "_File"
+msgstr "_Bestand"
+
+#: ../src/gnome-automator.glade.h:5
+msgid "_Help"
+msgstr "_Hulp"
+
+#: ../src/gnome-automator.glade.h:6
+msgid "_View"
+msgstr "Beel_d"
