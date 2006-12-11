@@ -1,0 +1,43 @@
+# Brazilian Portuguese translation of atomato
+# Copyright (C) 2000-2006 Free Software Foundation, Inc.
+# This file is distributed under the same license as the atomato package.
+# Joao Emanuel <joaoemanuel1981@gmail.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: atomato\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-10-03 02:09+0200\n"
+"PO-Revision-Date: 2006-12-11 01:47-0300\n"
+"Last-Translator: João Emanuel <joaoemanuel1981@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
+"PO-Revision-Date: 2006-10-17 22:44-0300\n"
+"Last-Translator: Joao Emanuel <joaoemanuel1981@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/gnome-automator.glade.h:1
+msgid "GNOME Automator"
+msgstr "Automatizador do GNOME"
+
+#: ../src/gnome-automator.glade.h:2
+msgid "_About"
+msgstr "_Sobre"
+
+#: ../src/gnome-automator.glade.h:3
+msgid "_Edit"
+msgstr "_Editar"
+
+#: ../src/gnome-automator.glade.h:4
+msgid "_File"
+msgstr "_Arquivo"
+
+#: ../src/gnome-automator.glade.h:5
+msgid "_Help"
+msgstr "Aj_uda"
+
+#: ../src/gnome-automator.glade.h:6
+msgid "_View"
+msgstr "E_xibir"
