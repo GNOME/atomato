@@ -44,7 +44,7 @@ dnl
 GETTEXT_PACKAGE=atomato
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE",[The gettext package])
-ALL_LINGUAS="ar ca en_CA en_GB es fi fr nl pt_BR sv vi zh_CN"
+ALL_LINGUAS="ar ca en_CA en_GB es fi fr gl nl pt_BR sv vi zh_CN"
 AM_GLIB_GNU_GETTEXT
 
 AC_SUBST(CFLAGS)
