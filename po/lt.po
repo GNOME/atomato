@@ -1,0 +1,41 @@
+# translation of atomato to Lithuanian
+# Copyright (C) 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the atomato package.
+#
+# Vytautas Povilaitis <punktyras@nkm.lt>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: atomato.HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-03-21 13:33+0200\n"
+"PO-Revision-Date: 2007-03-20 19:29+0200\n"
+"Last-Translator: Vytautas Povilaitis <punktyras@nkm.lt>\n"
+"Language-Team: Lithuanian <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../src/gnome-automator.glade.h:1
+msgid "GNOME Automator"
+msgstr "GNOME Automatizatorius"
+
+#: ../src/gnome-automator.glade.h:2
+msgid "_About"
+msgstr "_Apie"
+
+#: ../src/gnome-automator.glade.h:3
+msgid "_Edit"
+msgstr "_Taisyti"
+
+#: ../src/gnome-automator.glade.h:4
+msgid "_File"
+msgstr "_Failas"
+
+#: ../src/gnome-automator.glade.h:5
+msgid "_Help"
+msgstr "_Pagalba"
+
+#: ../src/gnome-automator.glade.h:6
+msgid "_View"
+msgstr "_Vaizdas"
