@@ -57,17 +57,18 @@ atomato_action_provider_get_type (void)
 }
 
 /**
- * atomato_action_provider_list_actions:
+ * atomato_action_provider_get_method:
  * @provider: An action provider.
  *
- * Queries a specific action provider implementation for the list of actions available.
+ * Returns the method implemented by the action provider to make calls to
+ * actions.
  *
- * Return value: A GSList of #AtomatoAction.
+ * Return value: The method implemented by the action provider.
  */
-GSList *
-atomato_action_provider_list_actions (AtomatoActionProvider *provider)
+AtomatoMethod
+atomato_action_provider_get_method (AtomatoActionProvider *provider)
 {
-	return ATOMATO_ACTION_PROVIDER_GET_INTERFACE (provider)->list_actions (provider);
+	return ATOMATO_ACTION_PROVIDER_GET_INTERFACE (provider)->get_method (provider);
 }
 
 /**
@@ -82,8 +83,8 @@ atomato_action_provider_list_actions (AtomatoActionProvider *provider)
  */
 GValueArray *
 atomato_action_provider_run_action (AtomatoActionProvider *provider,
-				    const gchar *action_name,
+				    AtomatoAction *action,
 				    const GValueArray *input_args)
 {
-	return ATOMATO_ACTION_PROVIDER_GET_INTERFACE (provider)->run_action (provider, action_name, input_args);
+	return ATOMATO_ACTION_PROVIDER_GET_INTERFACE (provider)->run_action (provider, action, input_args);
 }

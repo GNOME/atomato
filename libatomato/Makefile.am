@@ -10,6 +10,9 @@ libatomato_la_SOURCES =			\
 	atomato-action-provider.c	\
 	atomato-action-provider.h	\
 	atomato.c			\
-	atomato.h
+	atomato.h			\
+	shell-action-provider.c		\
+	shell-action-provider.h
+
 libatomato_la_LIBADD =	\
 	$(ATOMATO_LIBS)

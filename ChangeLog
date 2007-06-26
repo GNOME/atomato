@@ -1,3 +1,25 @@
+2007-05-26  Rodrigo Moya <rodrigo@gnome-db.org>
+
+	* libatomato/atomato.c (initialize): register the shell action provider.
+
+2007-06-25  Rodrigo Moya <rodrigo@gnome-db.org>
+
+	* libatomato/atomato.[ch]: added AtomatoMethod type.
+	(atomato_list_methods): new function.
+
+	* libatomato/atomato-action-provider.[ch]: removed list_actions method,
+	we'll get the list of actions by reading custom Atomato XML.
+	(atomato_action_provider_get_method): new method.
+	(atomato_action_provider_run_action): changed arguments list.
+
+	* libatomato/dbus-action-provider.c (dbus_action_provider_list_actions):
+	removed not needed method.
+	(dbus_action_provider_get_method): implemented new interface method.
+
+	* libatomato/Makefile.am:
+	* libatomato/shell-action-provider.c: let's start with the simplest
+	action provider.
+
 2007-03-21  Gintautas Miliauskas  <gintas@akl.lt>
 
 	* configure.in: Added lt to ALL_LINGUAS.

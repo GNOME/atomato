@@ -33,11 +33,20 @@ typedef struct {
 	char *type;
 } AtomatoActionArgument;
 
+typedef enum {
+	ATOMATO_METHOD_UNKNOWN = -1,
+	ATOMATO_METHOD_DBUS,
+	ATOMATO_METHOD_SHELL
+} AtomatoMethod;
+
 typedef struct {
+	char *section;
 	char *name;
+	AtomatoMethod method;
 	GList *args;
 } AtomatoAction;
 
+GSList *atomato_list_methods (void);
 GSList *atomato_list_actions (void);
 
 G_END_DECLS

@@ -152,30 +152,17 @@ hash_to_slist (gpointer key, gpointer value, gpointer user_data)
 	*list = g_slist_append (*list, value);
 }
 
-static GSList *
-dbus_action_provider_list_actions (AtomatoActionProvider *provider)
+static AtomatoMethod
+dbus_action_provider_get_method (AtomatoActionProvider *provider)
 {
-	GSList *list = NULL;
-	DbusActionProvider *dbus_provider = (DbusActionProvider *) provider;
+	g_return_val_if_fail (DBUS_IS_ACTION_PROVIDER (provider), ATOMATO_METHOD_UNKNOWN);
 
-	if (!dbus_provider->priv->names) {
-		/* create the hash table */
-		dbus_provider->priv->names = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
-
-		/* query DBus for the list of names */
-		//list_dbus_names (dbus_provider, dbus_provider->priv->system_proxy, dbus_provider->priv->system_connection);
-		list_dbus_names (dbus_provider, dbus_provider->priv->session_proxy, dbus_provider->priv->session_connection);
-	}
-
-	/* convert the hash table to a GSList and return that */
-	g_hash_table_foreach (dbus_provider->priv->names, (GHFunc) hash_to_slist, &list);
-
-	return list;
+	return ATOMATO_METHOD_DBUS;
 }
 
 static GValueArray *
 dbus_action_provider_run_action (AtomatoActionProvider *provider,
-				 const gchar *action_name,
+				 AtomatoAction *action,
 				 const GValueArray *input_args)
 {
 	return NULL;
@@ -186,7 +173,7 @@ dbus_action_provider_interface_init (gpointer g_iface, gpointer iface_data)
 {
 	AtomatoActionProviderInterface *iface = (AtomatoActionProviderInterface *) g_iface;
 
-	iface->list_actions = dbus_action_provider_list_actions;
+	iface->get_method = dbus_action_provider_get_method;
 	iface->run_action = dbus_action_provider_run_action;
 }
 

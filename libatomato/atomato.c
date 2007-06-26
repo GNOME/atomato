@@ -22,6 +22,7 @@
 
 #include "atomato.h"
 #include "dbus-action-provider.h"
+#include "shell-action-provider.h"
 
 static GSList *action_providers = NULL;
 
@@ -31,6 +32,7 @@ initialize (void)
 	if (action_providers != NULL)
 		return;
 
+	action_providers = g_slist_append (action_providers, g_object_new (SHELL_TYPE_ACTION_PROVIDER, NULL));
 	action_providers = g_slist_append (action_providers, g_object_new (DBUS_TYPE_ACTION_PROVIDER, NULL));
 }
 
@@ -44,14 +46,6 @@ atomato_list_actions (void)
 	GSList *sl, *all_names = NULL;
 
 	initialize ();
-
-	for (sl = action_providers; sl != NULL; sl = sl->next) {
-		GSList *names;
-
-		names = atomato_action_provider_list_actions (ATOMATO_ACTION_PROVIDER (sl->data));
-		if (names)
-			all_names = g_slist_concat (all_names, names);
-	}
 
 	return all_names;
 }

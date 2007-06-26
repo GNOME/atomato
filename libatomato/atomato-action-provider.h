@@ -24,6 +24,7 @@
 #define __ATOMATO_ACTION_PROVIDER_H__
 
 #include <glib-object.h>
+#include "atomato.h"
 
 G_BEGIN_DECLS
 
@@ -41,18 +42,18 @@ struct _AtomatoActionProvider {
 struct _AtomatoActionProviderInterface {
 	GTypeInterface parent;
 
-	GSList * (* list_actions) (AtomatoActionProvider *provider);
+	AtomatoMethod (* get_method) (AtomatoActionProvider *provider);
 	GValueArray * (* run_action) (AtomatoActionProvider *provider,
-				      const gchar *action_name,
+				      AtomatoAction *action,
 				      const GValueArray *input_args);
 };
 
 GType        atomato_action_provider_get_type (void);
 
-GSList      *atomato_action_provider_list_actions (AtomatoActionProvider *provider);
-GValueArray *atomato_action_provider_run_action (AtomatoActionProvider *provider,
-						 const gchar *action_name,
-						 const GValueArray *input_args);
+AtomatoMethod  atomato_action_provider_get_method (AtomatoActionProvider *provider);
+GValueArray   *atomato_action_provider_run_action (AtomatoActionProvider *provider,
+						   AtomatoAction *action,
+						   const GValueArray *input_args);
 
 G_END_DECLS
 
