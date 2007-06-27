@@ -1,5 +1,16 @@
 2007-05-26  Rodrigo Moya <rodrigo@gnome-db.org>
 
+	* configure.in:
+	* Makefile.am:
+	* src/Makefile.am:
+	* src/atomato-gui.h
+	* src/atomato-gui.glade:
+	* src/gui.c:
+	* src/main-window.c:
+	* src/main.c: started GUI frontend.
+
+2007-05-26  Rodrigo Moya <rodrigo@gnome-db.org>
+
 	* libatomato/atomato.c (initialize): register the shell action provider.
 
 2007-06-25  Rodrigo Moya <rodrigo@gnome-db.org>
