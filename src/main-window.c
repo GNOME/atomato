@@ -36,6 +36,44 @@ main_window_class_init (MainWindowClass *klass)
 }
 
 static void
+populate_actions_model (MainWindow *window)
+{
+	GSList *list, *sl;
+
+	list = atomato_list_actions ();
+	for (sl = list; sl != NULL; sl = sl->next) {
+		GtkTreeIter iter, section_iter;
+		GtkTreePath *section_path;
+		AtomatoAction *action = sl->data;
+
+		/* 1st add the section parent node if not present yet */
+		section_path = g_hash_table_lookup (window->sections, action->section);
+		if (section_path) {
+			gtk_tree_model_get_iter (GTK_TREE_MODEL (window->actions_model),
+						 &section_iter,
+						 section_path);
+		} else {
+			gchar *section_name;
+
+			gtk_tree_store_append (window->actions_model, &section_iter, NULL);
+			gtk_tree_store_set (window->actions_model, &section_iter, 0, action->section, -1);
+
+			section_name = g_strdup (action->section);
+			section_path = gtk_tree_model_get_path (GTK_TREE_MODEL (window->actions_model),
+								&section_iter);
+			g_hash_table_insert (window->sections, section_name, section_path);
+		}
+
+		/* now add the action to the tree */
+		gtk_tree_store_append (window->actions_model, &iter, &section_iter);
+		gtk_tree_store_set (window->actions_model, &iter, 0, action->description, -1);
+		/* FIXME: associate AtomatoAction with added row */
+	}
+
+	g_slist_free (list);
+}
+
+static void
 main_window_init (MainWindow *window)
 {
 	GtkCellRenderer *renderer;
@@ -55,9 +93,12 @@ main_window_init (MainWindow *window)
 
 	/* ... actions list ... */
 	window->actions_model = gtk_tree_store_new (1, G_TYPE_STRING);
+	window->sections = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, gtk_tree_path_free);
+	populate_actions_model (window);
 	
 	window->actions_list = glade_xml_get_widget (window->xml, "actions_list");
-	gtk_tree_view_set_model (GTK_TREE_VIEW (window->actions_list), window->actions_model);
+	gtk_tree_view_set_model (GTK_TREE_VIEW (window->actions_list),
+				 GTK_TREE_MODEL (window->actions_model));
 
 	renderer = gtk_cell_renderer_text_new ();
 	g_object_set (renderer, "xalign", 0.0, NULL);

@@ -14,6 +14,7 @@ atomato_SOURCES = 		\
 	main.c			\
 	main-window.c
 
-atomato_LDADD = 		\
-	$(ATOMATO_LIBS)		\
-	$(ATOMATO_GUI_LIBS)
+atomato_LDADD = 				\
+	$(ATOMATO_LIBS)				\
+	$(ATOMATO_GUI_LIBS)			\
+	$(top_builddir)/libatomato/libatomato.la

@@ -20,6 +20,7 @@
  * Boston, MA 02111-1307, USA.
  */
 
+#include <stdlib.h>
 #include <libxml/parser.h>
 #include "atomato.h"
 
@@ -37,6 +38,7 @@ read_action_from_xml_node (xmlNodePtr node)
 	action = g_new0 (AtomatoAction, 1);
 	action->section = (gchar *) xmlGetProp (node, "section");
 	action->name = (gchar *) xmlGetProp (node, "name");
+	action->description = (gchar *) xmlGetProp (node, "description");
 
 	str = (gchar *) xmlGetProp (node, "method");
 	if (!strcmp (str, "shell"))
@@ -91,11 +93,13 @@ atomato_read_action_file (const gchar *filename)
 	for (current_node = root->xmlChildrenNode;
 	     current_node != NULL;
 	     current_node = current_node->next) {
-		AtomatoAction *action;
+		if (!strcmp (current_node->name, "action")) {
+			AtomatoAction *action;
 
-		action = read_action_from_xml_node (current_node);
-		if (action)
-			list = g_slist_append (list, action);
+			action = read_action_from_xml_node (current_node);
+			if (action)
+				list = g_slist_append (list, action);
+		}
 	}
 
 	return list;
@@ -118,8 +122,9 @@ atomato_action_free (AtomatoAction *action)
 {
 	g_return_if_fail (action != NULL);
 
-	g_free (action->section);
-	g_free (action->name);
+	xmlFree (action->section);
+	xmlFree (action->name);
+        xmlFree (action->description);
 
 	while (action->args != NULL) {
 		atomato_action_argument_free ((AtomatoActionArgument *) action->args->data);

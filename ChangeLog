@@ -1,4 +1,18 @@
-2007-05-28  Rodrigo Moya <rodrigo@gnome-db.org>
+2007-06-28  Rodrigo Moya <rodrigo@gnome-db.org>
+
+	* libatomato/atomato.[ch]:
+	* libatomato/atomato-action.c:
+	* services/system/file_management.atomato: added description field.
+
+	* src/main-window.c (main_window_init, populate_actions_model): show
+	the list of actions in the library.
+
+	* tests/test-list-actions.c (main): show more information for each
+	action.
+
+	* services/system/file_management.atomato: added more actions.
+
+2007-06-28  Rodrigo Moya <rodrigo@gnome-db.org>
 
 	* libatomato/atomato-action.c: new file to manage AtomatoAction's.
 
@@ -10,7 +24,7 @@
 	* services/system/Makefile.am:
 	* services/system/file_management.atomato: added basic services.
 
-2007-05-26  Rodrigo Moya <rodrigo@gnome-db.org>
+2007-06-26  Rodrigo Moya <rodrigo@gnome-db.org>
 
 	* configure.in:
 	* Makefile.am:
@@ -21,7 +35,7 @@
 	* src/main-window.c:
 	* src/main.c: started GUI frontend.
 
-2007-05-26  Rodrigo Moya <rodrigo@gnome-db.org>
+2007-06-26  Rodrigo Moya <rodrigo@gnome-db.org>
 
 	* libatomato/atomato.c (initialize): register the shell action provider.
 

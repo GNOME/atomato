@@ -49,6 +49,7 @@ typedef enum {
 typedef struct {
 	gchar *section;
 	gchar *name;
+	gchar *description;
 	AtomatoMethod method;
 	gchar *command;
 	GList *args;

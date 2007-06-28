@@ -32,7 +32,10 @@ main (int argc, char **argv)
 	names = atomato_list_actions ();
 	while (names != NULL) {
 		AtomatoAction *action = names->data;
-		g_printf ("Action: %s\n", (const gchar *) action->name);
+		g_printf ("Action: %s.%s: %s\n",
+			  (const gchar *) action->section,
+			  (const gchar *) action->name,
+			  (const gchar *) action->description);
 		names = names->next;
 	}
 

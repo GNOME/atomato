@@ -25,6 +25,7 @@
 
 #include <gtk/gtktreestore.h>
 #include <glade/glade-xml.h>
+#include <libatomato/atomato.h>
 
 /*
  * Common GUI operations
@@ -45,6 +46,7 @@ typedef struct {
 
 	GtkWidget *actions_list;
 	GtkTreeStore *actions_model;
+	GHashTable *sections;
 } MainWindow;
 
 typedef struct {

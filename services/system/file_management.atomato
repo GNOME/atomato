@@ -1,9 +1,21 @@
 <atomato>
+
   <action section="System"
           name="ListFiles"
+	  description="List files"
 	  method="shell"
 	  command="ls %1">
     <arguments>
     </arguments>
   </action>
+
+  <action section="System"
+          name="CopyFiles"
+	  description="Copy files"
+	  method="shell"
+	  command="cp %1 %2">
+    <arguments>
+    </arguments>
+  </action>
+
 </atomato>
