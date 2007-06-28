@@ -60,8 +60,8 @@ parse_xml_interface (DbusActionProvider *dbus_provider, xmlNodePtr xml_node)
 
 			argument = g_new0 (AtomatoActionArgument, 1);
 			argument->name = g_strdup (xmlGetProp (arg_node, "name"));
-			argument->direction = g_strdup (xmlGetProp (arg_node, "direction"));
-			argument->type = g_strdup (xmlGetProp (arg_node, "type"));
+			//argument->direction = g_strdup (xmlGetProp (arg_node, "direction"));
+			//argument->type = g_strdup (xmlGetProp (arg_node, "type"));
 
 			action->args = g_list_append (action->args, argument);
 		}

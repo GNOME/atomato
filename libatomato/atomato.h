@@ -27,10 +27,17 @@
 
 G_BEGIN_DECLS
 
+typedef enum {
+	ATOMATO_ACTION_ARGUMENT_DIRECTION_UNKNOWN,
+	ATOMATO_ACTION_ARGUMENT_DIRECTION_IN,
+	ATOMATO_ACTION_ARGUMENT_DIRECTION_OUT,
+	ATOMATO_ACTION_ARGUMENT_DIRECTION_INOUT,
+} AtomatoActionArgumentDirection;
+
 typedef struct {
 	char *name;
-	char *direction;
-	char *type;
+	AtomatoActionArgumentDirection direction;
+	GType type;
 } AtomatoActionArgument;
 
 typedef enum {
@@ -40,11 +47,15 @@ typedef enum {
 } AtomatoMethod;
 
 typedef struct {
-	char *section;
-	char *name;
+	gchar *section;
+	gchar *name;
 	AtomatoMethod method;
+	gchar *command;
 	GList *args;
 } AtomatoAction;
+
+GSList *atomato_read_action_file (const gchar *filename);
+void    atomato_action_free (AtomatoAction *action);
 
 GSList *atomato_list_methods (void);
 GSList *atomato_list_actions (void);

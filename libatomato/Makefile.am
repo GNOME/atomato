@@ -9,6 +9,7 @@ libatomato_la_SOURCES =			\
 	$(DBUS_ACTION_PROVIDER_SRC)	\
 	atomato-action-provider.c	\
 	atomato-action-provider.h	\
+	atomato-action.c		\
 	atomato.c			\
 	atomato.h			\
 	shell-action-provider.c		\

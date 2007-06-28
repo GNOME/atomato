@@ -1,3 +1,15 @@
+2007-05-28  Rodrigo Moya <rodrigo@gnome-db.org>
+
+	* libatomato/atomato-action.c: new file to manage AtomatoAction's.
+
+	* libatomato/atomato.c (initialize): read directories containing actions
+	files.
+	(atomato_list_actions, atomato_list_methods): implement.
+
+	* services/Makefile.am:
+	* services/system/Makefile.am:
+	* services/system/file_management.atomato: added basic services.
+
 2007-05-26  Rodrigo Moya <rodrigo@gnome-db.org>
 
 	* configure.in:

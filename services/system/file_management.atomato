@@ -1,0 +1,9 @@
+<atomato>
+  <action section="System"
+          name="ListFiles"
+	  method="shell"
+	  command="ls %1">
+    <arguments>
+    </arguments>
+  </action>
+</atomato>
