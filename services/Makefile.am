@@ -1,1 +1,1 @@
-SUBDIRS = system
+SUBDIRS = desktop system

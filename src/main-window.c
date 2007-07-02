@@ -27,6 +27,9 @@
 #include <gtk/gtktreeview.h>
 #include "atomato-gui.h"
 
+/* Callbacks: in main-window-callbacks.c */
+gboolean actions_list_button_release_cb (GtkWidget *widget, GdkEventButton *event, gpointer user_data);
+
 static GObjectClass *parent_class = NULL;
 
 static void
@@ -97,6 +100,8 @@ main_window_init (MainWindow *window)
 	populate_actions_model (window);
 	
 	window->actions_list = glade_xml_get_widget (window->xml, "actions_list");
+	g_signal_connect (G_OBJECT (window->actions_list), "button_release_event",
+			  G_CALLBACK (actions_list_button_release_cb), window);
 	gtk_tree_view_set_model (GTK_TREE_VIEW (window->actions_list),
 				 GTK_TREE_MODEL (window->actions_model));
 
@@ -107,6 +112,9 @@ main_window_init (MainWindow *window)
 						     renderer,
 						     "text", 0,
 						     NULL);
+
+	/* script vertical box */
+	window->script_vbox = glade_xml_get_widget (window->xml, "script_vbox");
 }
 
 GType

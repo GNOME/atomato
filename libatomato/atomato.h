@@ -61,6 +61,8 @@ void    atomato_action_free (AtomatoAction *action);
 GSList *atomato_list_methods (void);
 GSList *atomato_list_actions (void);
 
+AtomatoAction *atomato_get_action_by_name (const gchar *name);
+
 G_END_DECLS
 
 #endif

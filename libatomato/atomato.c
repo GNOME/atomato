@@ -170,3 +170,14 @@ atomato_list_actions (void)
 
 	return list;
 }
+
+/**
+ * atomato_get_action_by_name:
+ */
+AtomatoAction *
+atomato_get_action_by_name (const gchar *name)
+{
+	initialize ();
+
+	return g_hash_table_lookup (actions, name);
+}

@@ -47,6 +47,8 @@ typedef struct {
 	GtkWidget *actions_list;
 	GtkTreeStore *actions_model;
 	GHashTable *sections;
+
+	GtkWidget *script_vbox;
 } MainWindow;
 
 typedef struct {

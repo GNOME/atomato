@@ -12,7 +12,8 @@ atomato_SOURCES = 		\
 	atomato-gui.h		\
 	gui.c			\
 	main.c			\
-	main-window.c
+	main-window.c		\
+	main-window-callbacks.c
 
 atomato_LDADD = 				\
 	$(ATOMATO_LIBS)				\

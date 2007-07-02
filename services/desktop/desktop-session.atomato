@@ -1,0 +1,21 @@
+<atomato>
+
+  <action section="Desktop"
+          name="LockScreen"
+	  description="Lock screen"
+	  method="shell"
+	  command="gnome-screensaver-command --lock">
+    <arguments>
+    </arguments>
+  </action>
+
+  <action section="Desktop"
+          name="SaveSession"
+	  description="Save session"
+	  method="shell"
+	  command="gnome-session-save">
+    <arguments>
+    </arguments>
+  </action>
+
+</atomato>

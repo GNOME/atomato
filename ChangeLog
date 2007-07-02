@@ -1,5 +1,17 @@
 2007-06-28  Rodrigo Moya <rodrigo@gnome-db.org>
 
+	* src/main-window.c (main_window_init): connect some signals.
+
+	* src/main-window-callbacks.c: put callbacks in a separate file.
+	(actions_list_button_release_cb): show popup menu.
+
+	* services/system/system-file_management.atomato:
+	* services/desktop/desktop-session.atomato:
+	* services/desktop/Makefile: use a better namespace and added more
+	actions.
+
+2007-06-28  Rodrigo Moya <rodrigo@gnome-db.org>
+
 	* libatomato/atomato.[ch]:
 	* libatomato/atomato-action.c:
 	* services/system/file_management.atomato: added description field.

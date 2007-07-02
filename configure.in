@@ -63,6 +63,7 @@ po/Makefile.in
 libatomato/Makefile
 src/Makefile
 services/Makefile
+services/desktop/Makefile
 services/system/Makefile
 tests/Makefile])
 AC_OUTPUT
