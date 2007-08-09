@@ -1,3 +1,7 @@
+2007-08-09  Inaki Larranaga Murgoitio  <dooteo@zundan.com>
+
+	* configure.in: Added 'eu' to ALL_LINGUAS.
+
 2007-06-28  Rodrigo Moya <rodrigo@gnome-db.org>
 
 	* src/main-window.c (main_window_init): connect some signals.
