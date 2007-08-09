@@ -1,0 +1,43 @@
+# translation of eu.po to Basque
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: eu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-08-12 17:29+0200\n"
+"PO-Revision-Date: 2007-08-09 12:08+0200\n"
+"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
+"Language-Team: Basque <itzulpena@euskalgnu.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/gnome-automator.glade.h:1
+msgid "GNOME Automator"
+msgstr "GNOME Automator"
+
+#: ../src/gnome-automator.glade.h:2
+msgid "_About"
+msgstr "Honi _buruz"
+
+#: ../src/gnome-automator.glade.h:3
+msgid "_Edit"
+msgstr "_Editatu"
+
+#: ../src/gnome-automator.glade.h:4
+msgid "_File"
+msgstr "_Fitxategia"
+
+#: ../src/gnome-automator.glade.h:5
+msgid "_Help"
+msgstr "_Laguntza"
+
+#: ../src/gnome-automator.glade.h:6
+msgid "_View"
+msgstr "_Ikusi"
+
