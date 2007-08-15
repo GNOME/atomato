@@ -1,3 +1,4 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
-src/gnome-automator.glade
+src/atomato-gui.glade
+src/main-window.c

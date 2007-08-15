@@ -1,3 +1,8 @@
+2007-08-15  Adam Weinberger  <adamw@gnome.org>
+
+	* POTFILES.in: Change to reflect reality.
+	* en_CA.po: Updated Canadian English translation.
+
 2007-08-09  Inaki Larranaga Murgoitio  <dooteo@zundan.com>
 
 	* eu.po: Translated to Basque language..
