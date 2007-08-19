@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: atomato\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-12-29 11:00+0200\n"
+"POT-Creation-Date: 2007-08-19 17:16+0300\n"
 "PO-Revision-Date: 2006-12-29 11:00+0200\n"
 "Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
@@ -17,26 +17,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/gnome-automator.glade.h:1
-msgid "GNOME Automator"
-msgstr "Gnomen automatisoija"
+#: ../src/atomato-gui.glade.h:1
+msgid "GNOME Atomato"
+msgstr "Gnome atomato"
 
-#: ../src/gnome-automator.glade.h:2
-msgid "_About"
-msgstr "_Tietoja"
-
-#: ../src/gnome-automator.glade.h:3
+#: ../src/atomato-gui.glade.h:2
 msgid "_Edit"
 msgstr "_Muokkaa"
 
-#: ../src/gnome-automator.glade.h:4
+#: ../src/atomato-gui.glade.h:3
 msgid "_File"
 msgstr "_Tiedosto"
 
-#: ../src/gnome-automator.glade.h:5
+#: ../src/atomato-gui.glade.h:4
 msgid "_Help"
 msgstr "O_hje"
 
-#: ../src/gnome-automator.glade.h:6
+#: ../src/atomato-gui.glade.h:5
 msgid "_View"
 msgstr "_Näytä"
+
+#: ../src/main-window.c:87
+msgid "Could not load atomato-gui.glade file"
+msgstr "Tiedostoa atomato-gui.glade ei voitu ladata"
+
+#~ msgid "_About"
+#~ msgstr "_Tietoja"
