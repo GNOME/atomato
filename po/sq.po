@@ -1,0 +1,41 @@
+# Përkthimi i atomato në shqip.
+# Copyright (C) 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the atomato package.
+#
+# Laurent Dhima <laurenti@alblinux.net>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: atomato HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-09-20 18:32+0200\n"
+"PO-Revision-Date: 2007-09-20 18:28+0200\n"
+"Last-Translator: Laurent Dhima <laurenti@alblinux.net>\n"
+"Language-Team: albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/atomato-gui.glade.h:1
+msgid "GNOME Atomato"
+msgstr "GNOME Atomato"
+
+#: ../src/atomato-gui.glade.h:2
+msgid "_Edit"
+msgstr "_Ndrysho"
+
+#: ../src/atomato-gui.glade.h:3
+msgid "_File"
+msgstr "_File"
+
+#: ../src/atomato-gui.glade.h:4
+msgid "_Help"
+msgstr "_Ndihmë"
+
+#: ../src/atomato-gui.glade.h:5
+msgid "_View"
+msgstr "_Shfaq"
+
+#: ../src/main-window.c:87
+msgid "Could not load atomato-gui.glade file"
+msgstr "I pamundur ngarkimi i file atomato-gui.glade"

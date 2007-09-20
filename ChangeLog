@@ -1,3 +1,7 @@
+2007-09-20  Laurent Dhima  <laurenti@alblinux.net>
+
+	* configure.in: Added 'sq' to ALL_LINGUAS.
+
 2007-08-09  Inaki Larranaga Murgoitio  <dooteo@zundan.com>
 
 	* configure.in: Added 'eu' to ALL_LINGUAS.
