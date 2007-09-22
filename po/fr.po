@@ -2,41 +2,41 @@
 # Copyright (C) 2006-2007 Free Software Foundation, Inc.
 # This file is distributed under the same license as the atomato package.
 #
-# Robert-André Mauchin <zebob.m@gmail.com>, 2006.
+# Robert-André Mauchin <zebob.m@penzone.org>, 2006-2007.
 # Jonathan Ernst <jonathan@ernstfamily.ch>, 2007.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: atomato 2.15.1\n"
+"Project-Id-Version: atomato HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-12 21:54+0100\n"
-"PO-Revision-Date: 2007-02-11 13:08+0100\n"
-"Last-Translator: Jonathan Ernst <jonathan@ernstfamily.ch>\n"
+"POT-Creation-Date: 2007-09-22 16:40+0200\n"
+"PO-Revision-Date: 2007-09-22 16:41+0200\n"
+"Last-Translator: Robert-André Mauchin <zebob.m@penzone.org>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/gnome-automator.glade.h:1
-msgid "GNOME Automator"
-msgstr "GNOME Automator"
+#: ../src/atomato-gui.glade.h:1
+msgid "GNOME Atomato"
+msgstr "GNOME Atomato"
 
-#: ../src/gnome-automator.glade.h:2
-msgid "_About"
-msgstr "À _propos"
-
-#: ../src/gnome-automator.glade.h:3
+#: ../src/atomato-gui.glade.h:2
 msgid "_Edit"
 msgstr "É_dition"
 
-#: ../src/gnome-automator.glade.h:4
+#: ../src/atomato-gui.glade.h:3
 msgid "_File"
 msgstr "_Fichier"
 
-#: ../src/gnome-automator.glade.h:5
+#: ../src/atomato-gui.glade.h:4
 msgid "_Help"
 msgstr "Aid_e"
 
-#: ../src/gnome-automator.glade.h:6
+#: ../src/atomato-gui.glade.h:5
 msgid "_View"
 msgstr "_Affichage"
+
+#: ../src/main-window.c:87
+msgid "Could not load atomato-gui.glade file"
+msgstr "Impossible de charger le fichier atmato-gui.glade"
