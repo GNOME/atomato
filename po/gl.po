@@ -3,40 +3,41 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Ignacio Casal Quinteiro <icq@cvs.gnome.org>, 2007.
+# Ignacio Casal Quinteiro <icq@svn.gnome.org>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-01 12:10+0100\n"
-"PO-Revision-Date: 2007-01-11 17:30+0100\n"
-"Last-Translator: Ignacio Casal Quinteiro <icq@cvs.gnome.org>\n"
-"Language-Team: Galego <trasno@ceu.fi.udc.es>\n"
+"POT-Creation-Date: 2007-11-29 21:46+0100\n"
+"PO-Revision-Date: 2007-11-29 21:46+0100\n"
+"Last-Translator: Ignacio Casal Quinteiro <icq@svn.gnome.org>\n"
+"Language-Team: Galego <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../src/gnome-automator.glade.h:1
-msgid "GNOME Automator"
-msgstr "GNOME Automator"
+#: ../src/atomato-gui.glade.h:1
+msgid "GNOME Atomato"
+msgstr "GNOME Atomato"
 
-#: ../src/gnome-automator.glade.h:2
-msgid "_About"
-msgstr "_Acerca de"
-
-#: ../src/gnome-automator.glade.h:3
+#: ../src/atomato-gui.glade.h:2
 msgid "_Edit"
 msgstr "_Editar"
 
-#: ../src/gnome-automator.glade.h:4
+#: ../src/atomato-gui.glade.h:3
 msgid "_File"
 msgstr "_Ficheiro"
 
-#: ../src/gnome-automator.glade.h:5
+#: ../src/atomato-gui.glade.h:4
 msgid "_Help"
 msgstr "A_xuda"
 
-#: ../src/gnome-automator.glade.h:6
+#: ../src/atomato-gui.glade.h:5
 msgid "_View"
 msgstr "_Vista"
+
+#: ../src/main-window.c:87
+msgid "Could not load atomato-gui.glade file"
+msgstr "Non se puido cargar o ficheiro atomato-gui.glade"
 
