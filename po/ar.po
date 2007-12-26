@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Atomato\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-11-17 21:14+0000\n"
-"PO-Revision-Date: 2007-04-27 23:26+0100\n"
+"POT-Creation-Date: 2007-12-26 16:54+0000\n"
+"PO-Revision-Date: 2007-12-26 16:54+0100\n"
 "Last-Translator: Djihed Afifi <djihed@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,27 +17,30 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n == 0 ? 0 : n == 1 ? 1 : n == 2 ? 2 : n >= 3 && n <= 10 ? 3 : n >= 11 && n <= 99 ? 4 : 5;\n"
 "X-Poedit-Language: Arabic\n"
 
-#: ../src/gnome-automator.glade.h:1
-msgid "GNOME Automator"
-msgstr "جنوم أوتوماتيكي"
+#: ../src/atomato-gui.glade.h:1
+msgid "GNOME Atomato"
+msgstr "جنوم أوتوماتو"
 
-#: ../src/gnome-automator.glade.h:2
-msgid "_About"
-msgstr "_حول"
-
-#: ../src/gnome-automator.glade.h:3
+#: ../src/atomato-gui.glade.h:2
 msgid "_Edit"
 msgstr "_تحرير"
 
-#: ../src/gnome-automator.glade.h:4
+#: ../src/atomato-gui.glade.h:3
 msgid "_File"
 msgstr "_ملف"
 
-#: ../src/gnome-automator.glade.h:5
+#: ../src/atomato-gui.glade.h:4
 msgid "_Help"
 msgstr "م_ساعدة"
 
-#: ../src/gnome-automator.glade.h:6
+#: ../src/atomato-gui.glade.h:5
 msgid "_View"
 msgstr "_اعرض"
+
+#: ../src/main-window.c:87
+msgid "Could not load atomato-gui.glade file"
+msgstr "لم يمكن تحميل الملف atomato-gui.glade"
+
+#~ msgid "_About"
+#~ msgstr "_حول"
 
