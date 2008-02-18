@@ -1,41 +1,40 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Kjartan Maraas <kmaraas@gnome.org>, 2008.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: atomato 0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-24 15:01+0100\n"
-"PO-Revision-Date: 2007-01-24 15:02+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2008-02-18 14:21+0100\n"
+"PO-Revision-Date: 2008-02-18 14:22+0100\n"
+"Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
+"Language-Team: Norwegian bokmal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/gnome-automator.glade.h:1
-msgid "GNOME Automator"
-msgstr "GNOME automatisering"
+#: ../src/atomato-gui.glade.h:1
+msgid "GNOME Atomato"
+msgstr "GNOME Atomato"
 
-#: ../src/gnome-automator.glade.h:2
-msgid "_About"
-msgstr "_Om"
-
-#: ../src/gnome-automator.glade.h:3
+#: ../src/atomato-gui.glade.h:2
 msgid "_Edit"
 msgstr "R_ediger"
 
-#: ../src/gnome-automator.glade.h:4
+#: ../src/atomato-gui.glade.h:3
 msgid "_File"
 msgstr "_Fil"
 
-#: ../src/gnome-automator.glade.h:5
+#: ../src/atomato-gui.glade.h:4
 msgid "_Help"
 msgstr "_Hjelp"
 
-#: ../src/gnome-automator.glade.h:6
+#: ../src/atomato-gui.glade.h:5
 msgid "_View"
 msgstr "_Vis"
+
+#: ../src/main-window.c:87
+msgid "Could not load atomato-gui.glade file"
+msgstr "Kunne ikke laste glade-fil for atomato"
