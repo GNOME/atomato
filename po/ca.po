@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Atomato\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-10-02 03:40+0200\n"
-"PO-Revision-Date: 2006-10-02 03:40+0200\n"
+"POT-Creation-Date: 2008-02-19 14:46+0100\n"
+"PO-Revision-Date: 2008-02-19 14:47+0100\n"
 "Last-Translator: Jordi Sayol Salomó <jordisayol@gmail.com>\n"
 "Language-Team: Softcatalà <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,26 +18,29 @@ msgstr ""
 "X-Poedit-Language: Catalan\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../src/gnome-automator.glade.h:1
-msgid "GNOME Automator"
-msgstr "l'Automator de GNOME"
+#: ../src/atomato-gui.glade.h:1
+msgid "GNOME Atomato"
+msgstr "Automator de GNOME"
 
-#: ../src/gnome-automator.glade.h:2
-msgid "_About"
-msgstr "_Quant a"
-
-#: ../src/gnome-automator.glade.h:3
+#: ../src/atomato-gui.glade.h:2
 msgid "_Edit"
 msgstr "_Edita"
 
-#: ../src/gnome-automator.glade.h:4
+#: ../src/atomato-gui.glade.h:3
 msgid "_File"
 msgstr "_Fitxer"
 
-#: ../src/gnome-automator.glade.h:5
+#: ../src/atomato-gui.glade.h:4
 msgid "_Help"
 msgstr "A_juda"
 
-#: ../src/gnome-automator.glade.h:6
+#: ../src/atomato-gui.glade.h:5
 msgid "_View"
 msgstr "_Visualitza"
+
+#: ../src/main-window.c:87
+msgid "Could not load atomato-gui.glade file"
+msgstr "No s'ha pogut carregar el fitxer atomato-gui.glade"
+
+#~ msgid "_About"
+#~ msgstr "_Quant a"
