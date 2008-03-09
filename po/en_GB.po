@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: atomato\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-13 07:10+0100\n"
+"POT-Creation-Date: 2008-03-09 15:43+0000\n"
 "PO-Revision-Date: 2006-09-13 07:11-0000\n"
 "Last-Translator: David Lodge <dave@cirt.net>\n"
 "Language-Team: English (British) <en@li.org>\n"
@@ -15,27 +15,29 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/gnome-automator.glade.h:1
-msgid "GNOME Automator"
-msgstr "GNOME Automator"
+#: ../src/atomato-gui.glade.h:1
+msgid "GNOME Atomato"
+msgstr "GNOME Atomato"
 
-#: ../src/gnome-automator.glade.h:2
-msgid "_About"
-msgstr "_About"
-
-#: ../src/gnome-automator.glade.h:3
+#: ../src/atomato-gui.glade.h:2
 msgid "_Edit"
 msgstr "_Edit"
 
-#: ../src/gnome-automator.glade.h:4
+#: ../src/atomato-gui.glade.h:3
 msgid "_File"
 msgstr "_File"
 
-#: ../src/gnome-automator.glade.h:5
+#: ../src/atomato-gui.glade.h:4
 msgid "_Help"
 msgstr "_Help"
 
-#: ../src/gnome-automator.glade.h:6
+#: ../src/atomato-gui.glade.h:5
 msgid "_View"
 msgstr "_View"
 
+#: ../src/main-window.c:87
+msgid "Could not load atomato-gui.glade file"
+msgstr "Could not load atomato-gui.glade file"
+
+#~ msgid "_About"
+#~ msgstr "_About"
