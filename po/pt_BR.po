@@ -2,39 +2,44 @@
 # Copyright (C) 2000-2006 Free Software Foundation, Inc.
 # This file is distributed under the same license as the atomato package.
 # Joao Emanuel <joaoemanuel1981@gmail.com>, 2006.
+# Og Maciel <ogmaciel@gnome.org>, 2007.
+# Leonardo Ferreira Fontenelle <leonardof@gnome.org>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: atomato\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-04 10:24-0200\n"
-"PO-Revision-Date: 2007-01-04 10:26-0200\n"
-"Last-Translator: Og Maciel <ogmaciel@ubuntu.com>\n"
+"POT-Creation-Date: 2007-08-15 21:46+0100\n"
+"PO-Revision-Date: 2008-04-30 23:23-0300\n"
+"Last-Translator: Leonardo Ferreira Fontenelle <leonardof@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/gnome-automator.glade.h:1
-msgid "GNOME Automator"
+#: ../src/atomato-gui.glade.h:1
+msgid "GNOME Atomato"
 msgstr "Automatizador do GNOME"
 
-#: ../src/gnome-automator.glade.h:2
-msgid "_About"
-msgstr "_Sobre"
-
-#: ../src/gnome-automator.glade.h:3
+#: ../src/atomato-gui.glade.h:2
 msgid "_Edit"
 msgstr "_Editar"
 
-#: ../src/gnome-automator.glade.h:4
+#: ../src/atomato-gui.glade.h:3
 msgid "_File"
 msgstr "_Arquivo"
 
-#: ../src/gnome-automator.glade.h:5
+#: ../src/atomato-gui.glade.h:4
 msgid "_Help"
 msgstr "Aj_uda"
 
-#: ../src/gnome-automator.glade.h:6
+#: ../src/atomato-gui.glade.h:5
 msgid "_View"
 msgstr "_Ver"
+
+#: ../src/main-window.c:87
+msgid "Could not load atomato-gui.glade file"
+msgstr "Não foi possível carregar o arquivo atomato-gui.glade"
+
+#~ msgid "_About"
+#~ msgstr "_Sobre"
