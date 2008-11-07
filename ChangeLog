@@ -1,3 +1,8 @@
+2008-11-07  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* src/main-window-callbacks.c: (actions_list_button_release_cb):
+	Make it build.
+
 2008-10-12  Petr Kovar  <pknbe@volny.cz>
 
 	* configure.in: Added "cs", "bn" and "pl" to ALL_LINGUAS.

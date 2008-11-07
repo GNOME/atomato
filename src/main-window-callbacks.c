@@ -41,7 +41,7 @@ actions_list_button_release_cb (GtkWidget *widget, GdkEventButton *event, gpoint
 	/* create the menu */
 	menu = gtk_menu_new ();
 
-	menu_item = gtk_image_menu_item_new_from_stock (GTK_STOCK_PROPERTIES);
+	menu_item = gtk_image_menu_item_new_from_stock (GTK_STOCK_PROPERTIES, NULL);
 	gtk_widget_set_sensitive (menu_item, has_selection);
 	gtk_widget_show (menu_item);
 	gtk_menu_append (GTK_MENU (menu), menu_item);
