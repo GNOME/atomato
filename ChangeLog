@@ -1,3 +1,7 @@
+2009-03-02  Jani Monoses  <jani@ubuntu.com>
+
+	* configure.in: Added ro to ALL_LINGUAS 
+
 2008-11-29  Mario Blättermann  <mariobl@svn.gnome.org>
 
 	* configure.in: Added de to list of languages
