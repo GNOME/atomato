@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=atomato&component=general\n"
+"POT-Creation-Date: 2009-03-02 19:20+0000\n"
+"PO-Revision-Date: 2009-04-06 22:31+0100\n"
+"Last-Translator: Milan SKOCIC <milan.skocic@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/atomato-gui.glade.h:1
+msgid "GNOME Atomato"
+msgstr "Gnomotator"
+
+#: ../src/atomato-gui.glade.h:2
+msgid "_Edit"
+msgstr "_Uređivanje"
+
+#: ../src/atomato-gui.glade.h:3
+msgid "_File"
+msgstr "_Datoteka"
+
+#: ../src/atomato-gui.glade.h:4
+msgid "_Help"
+msgstr "_Pomoć"
+
+#: ../src/atomato-gui.glade.h:5
+msgid "_View"
+msgstr "P_rikaz"
+
+#: ../src/main-window.c:87
+msgid "Could not load atomato-gui.glade file"
+msgstr "Ne mogu da učitam datoteku atomato-gui.glade"
