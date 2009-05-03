@@ -23,6 +23,11 @@
 
 	* configure.in: Added "cs", "bn" and "pl" to ALL_LINGUAS.
 
+2008-06-16  Rodrigo Moya <rodrigo@gnome-db.org>
+
+	* libatomato/shell-action-provider.c (shell_action_provider_run_action):
+	added missing implementation
+
 2008-03-23  Kostas Papadimas <pkst@gnome.org>
 
 	* configure.in: Added 'el' to ALL_LINGUAS.

@@ -31,6 +31,7 @@ DBUS_REQUIRED=0.60
 
 PKG_CHECK_MODULES(ATOMATO, 
 		  glib-2.0       >= $GTK_REQUIRED 
+		  gobject-2.0	 >= $GTK_REQUIRED
 		  libxml-2.0
 		  dbus-glib-1	 >= $DBUS_REQUIRED)
 AC_SUBST(ATOMATO_CFLAGS)

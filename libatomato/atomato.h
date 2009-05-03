@@ -24,44 +24,13 @@
 #define __ATOMATO_H__
 
 #include <glib-object.h>
+#include "atomato-action.h"
+#include "atomato-action-provider.h"
 
 G_BEGIN_DECLS
 
-typedef enum {
-	ATOMATO_ACTION_ARGUMENT_DIRECTION_UNKNOWN,
-	ATOMATO_ACTION_ARGUMENT_DIRECTION_IN,
-	ATOMATO_ACTION_ARGUMENT_DIRECTION_OUT,
-	ATOMATO_ACTION_ARGUMENT_DIRECTION_INOUT,
-} AtomatoActionArgumentDirection;
-
-typedef struct {
-	char *name;
-	AtomatoActionArgumentDirection direction;
-	GType type;
-} AtomatoActionArgument;
-
-typedef enum {
-	ATOMATO_METHOD_UNKNOWN = -1,
-	ATOMATO_METHOD_DBUS,
-	ATOMATO_METHOD_SHELL
-} AtomatoMethod;
-
-typedef struct {
-	gchar *section;
-	gchar *name;
-	gchar *description;
-	AtomatoMethod method;
-	gchar *command;
-	GList *args;
-} AtomatoAction;
-
-GSList *atomato_read_action_file (const gchar *filename);
-void    atomato_action_free (AtomatoAction *action);
-
-GSList *atomato_list_methods (void);
 GSList *atomato_list_actions (void);
-
-AtomatoAction *atomato_get_action_by_name (const gchar *name);
+void    atomato_free_actions_list (GSList *list);
 
 G_END_DECLS
 

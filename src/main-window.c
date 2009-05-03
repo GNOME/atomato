@@ -50,7 +50,8 @@ populate_actions_model (MainWindow *window)
 		AtomatoAction *action = sl->data;
 
 		/* 1st add the section parent node if not present yet */
-		section_path = g_hash_table_lookup (window->sections, action->section);
+		section_path = g_hash_table_lookup (window->sections,
+						    atomato_action_get_section (action));
 		if (section_path) {
 			gtk_tree_model_get_iter (GTK_TREE_MODEL (window->actions_model),
 						 &section_iter,
@@ -59,9 +60,10 @@ populate_actions_model (MainWindow *window)
 			gchar *section_name;
 
 			gtk_tree_store_append (window->actions_model, &section_iter, NULL);
-			gtk_tree_store_set (window->actions_model, &section_iter, 0, action->section, -1);
+			gtk_tree_store_set (window->actions_model, &section_iter,
+					    0, atomato_action_get_section (action), -1);
 
-			section_name = g_strdup (action->section);
+			section_name = g_strdup (atomato_action_get_section (action));
 			section_path = gtk_tree_model_get_path (GTK_TREE_MODEL (window->actions_model),
 								&section_iter);
 			g_hash_table_insert (window->sections, section_name, section_path);
@@ -69,7 +71,8 @@ populate_actions_model (MainWindow *window)
 
 		/* now add the action to the tree */
 		gtk_tree_store_append (window->actions_model, &iter, &section_iter);
-		gtk_tree_store_set (window->actions_model, &iter, 0, action->description, -1);
+		gtk_tree_store_set (window->actions_model, &iter, 0,
+				    atomato_action_get_description (action), -1);
 		/* FIXME: associate AtomatoAction with added row */
 	}
 

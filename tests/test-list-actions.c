@@ -33,9 +33,9 @@ main (int argc, char **argv)
 	while (names != NULL) {
 		AtomatoAction *action = names->data;
 		g_printf ("Action: %s.%s: %s\n",
-			  (const gchar *) action->section,
-			  (const gchar *) action->name,
-			  (const gchar *) action->description);
+			  atomato_action_get_section (action),
+			  atomato_action_get_name (action),
+			  atomato_action_get_description (action));
 		names = names->next;
 	}
 

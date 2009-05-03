@@ -21,116 +21,88 @@
  */
 
 #include <stdlib.h>
-#include <libxml/parser.h>
-#include "atomato.h"
+#include "atomato-action.h"
 
-static AtomatoAction *
-read_action_from_xml_node (xmlNodePtr node)
+static void
+atomato_action_base_init (gpointer g_class)
 {
-	AtomatoAction *action = NULL;
-	gchar *str;
+	static gboolean initialized = FALSE;
 
-	if (!node->name || strcmp (node->name, "action")) {
-		g_warning ("Invalid action node");
-		return NULL;
+	if (!initialized) {
+		/* Create signals for the interface */
+		initialized = TRUE;
+	}
+}
+
+GType
+atomato_action_get_type (void)
+{
+	static GType type = 0;
+
+	if (type == 0) {
+		static const GTypeInfo info = {
+			sizeof (AtomatoActionInterface),
+			atomato_action_base_init,   /* base_init */
+			NULL,   /* base_finalize */
+			NULL,   /* class_init */
+			NULL,   /* class_finalize */
+			NULL,   /* class_data */
+			0,
+			0,      /* n_preallocs */
+			NULL    /* instance_init */
+		};
+		type = g_type_register_static (G_TYPE_INTERFACE, "AtomatoAction", &info, 0);
 	}
 
-	action = g_new0 (AtomatoAction, 1);
-	action->section = (gchar *) xmlGetProp (node, "section");
-	action->name = (gchar *) xmlGetProp (node, "name");
-	action->description = (gchar *) xmlGetProp (node, "description");
-
-	str = (gchar *) xmlGetProp (node, "method");
-	if (!strcmp (str, "shell"))
-		action->method = ATOMATO_METHOD_SHELL;
-	else if (!strcmp (str, "dbus"))
-		action->method = ATOMATO_METHOD_DBUS;
-	else {
-		atomato_action_free (action);
-		return NULL;
-	}
-
-	action->command = (gchar *) xmlGetProp (node, "command");
-
-	return action;
+	return type;
 }
 
 /**
- * atomatio_read_action_file:
- * @filename: Full path of the file to parse.
- *
- * Read a .atomato file and converts it to a list of AtomatoAction objects.
- *
- * Return value: A list containing all actions in the file.
+ * atomato_action_get_name:
  */
-GSList *
-atomato_read_action_file (const gchar *filename)
+const gchar *
+atomato_action_get_name (AtomatoAction *action)
 {
-	GSList *list = NULL;
-	xmlDocPtr doc;
-	xmlNodePtr root, current_node;
-
-	doc = xmlParseFile (filename);
-	if (!doc) {
-		g_warning ("Could not read %s file", filename);
-		return NULL;
-	}
-
-	root = xmlDocGetRootElement (doc);
-	if (!root) {
-		g_warning ("Cannot get root element for %s", filename);
-		xmlFreeDoc (doc);
-		return NULL;
-	}
-
-	if (!root->name || strcmp ((const char *) root->name, "atomato")) {
-		g_warning (" %s is not a valid Atomato XML file", filename);
-		xmlFreeDoc (doc);
-		return NULL;
-	}
-
-	/* now read the actions */
-	for (current_node = root->xmlChildrenNode;
-	     current_node != NULL;
-	     current_node = current_node->next) {
-		if (!strcmp (current_node->name, "action")) {
-			AtomatoAction *action;
-
-			action = read_action_from_xml_node (current_node);
-			if (action)
-				list = g_slist_append (list, action);
-		}
-	}
-
-	return list;
+	return ATOMATO_ACTION_GET_INTERFACE (action)->get_name (action);
 }
 
+/**
+ * atomato_action_get_section:
+ */
+const gchar *
+atomato_action_get_section (AtomatoAction *action)
+{
+	return ATOMATO_ACTION_GET_INTERFACE (action)->get_section (action);
+}
+
+/**
+ * atomato_action_get_description:
+ */
+const gchar *
+atomato_action_get_description (AtomatoAction *action)
+{
+	return ATOMATO_ACTION_GET_INTERFACE (action)->get_description (action);
+}
+
+/**
+ * atomato_action_run:
+ */
+GValue *
+atomato_action_run (AtomatoAction *action, GValueArray *arguments)
+{
+	return ATOMATO_ACTION_GET_INTERFACE (action)->run (action, arguments);
+}
+
+/**
+ * atomato_action_free_argument:
+ */
 void
-atomato_action_argument_free (AtomatoActionArgument *argument)
+atomato_action_free_argument (AtomatoActionArgument *argument)
 {
 	g_return_if_fail (argument != NULL);
 
 	g_free (argument->name);
+	g_free (argument->description);
+
 	g_free (argument);
-}
-
-/**
- * atomato_action_free:
- */
-void
-atomato_action_free (AtomatoAction *action)
-{
-	g_return_if_fail (action != NULL);
-
-	xmlFree (action->section);
-	xmlFree (action->name);
-        xmlFree (action->description);
-
-	while (action->args != NULL) {
-		atomato_action_argument_free ((AtomatoActionArgument *) action->args->data);
-
-		action->args = g_slist_remove (action->args, action->args);
-	}
-
-	g_free (action);
 }

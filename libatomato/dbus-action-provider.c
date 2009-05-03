@@ -27,15 +27,134 @@
 #include "dbus-action-provider.h"
 
 struct _DbusActionProviderPrivate {
-	//DBusGConnection *system_connection;
 	DBusGConnection *session_connection;
-	//DBusGProxy *system_proxy;
 	DBusGProxy *session_proxy;
 
 	GHashTable *names;
 };
 
-static GObjectClass *parent_class = NULL;
+static GObjectClass *action_parent_class = NULL;
+static GObjectClass *provider_parent_class = NULL;
+
+/*
+ * DbusAction class implementation
+ */
+
+typedef struct {
+	GObject *parent;
+
+	gchar *name;
+	GSList *args;
+} DbusAction;
+
+typedef struct {
+	GObjectClass parent_class;
+} DbusActionClass;
+
+static const gchar *
+dbus_action_get_name (AtomatoAction *action)
+{
+	DbusAction *dbus_action = (DbusAction *) action;
+
+	return (const gchar *) dbus_action->name;
+}
+
+static const gchar *
+dbus_action_get_section (AtomatoAction *action)
+{
+	return "";
+}
+
+static const gchar *
+dbus_action_get_description (AtomatoAction *action)
+{
+	return "";
+}
+
+static GValue *
+dbus_action_run (AtomatoAction *action, GValueArray *arguments)
+{
+}
+
+static void
+dbus_action_interface_init (gpointer g_iface, gpointer iface_data)
+{
+	AtomatoActionInterface *iface = (AtomatoActionInterface *) g_iface;
+
+	iface->get_name = dbus_action_get_name;
+	iface->get_section = dbus_action_get_section;
+	iface->get_description = dbus_action_get_description;
+	iface->run = dbus_action_run;
+}
+
+static void
+dbus_action_instance_init (GTypeInstance *instance, gpointer g_class)
+{
+	DbusAction *dbus_action = (DbusAction *) instance;
+}
+
+static void
+dbus_action_finalize (GObject *object)
+{
+	DbusAction *dbus_action = (DbusAction *) object;
+
+	if (dbus_action->name) {
+		g_free (dbus_action->name);
+		dbus_action->name = NULL;
+	}
+
+	if (dbus_action->args) {
+		g_slist_foreach (dbus_action->args, (GFunc) atomato_action_free_argument, NULL);
+		g_slist_free (dbus_action->args);
+		dbus_action->args = NULL;
+	}
+
+	action_parent_class->finalize (object);
+}
+
+static void
+dbus_action_class_init (DbusActionClass *klass)
+{
+	GObjectClass *object_class = G_OBJECT_CLASS (klass);
+
+	action_parent_class = g_type_class_ref (G_TYPE_OBJECT);
+
+	object_class->finalize = dbus_action_finalize;
+}
+
+GType 
+dbus_action_get_type (void)
+{
+	static GType type = 0;
+
+	if (type == 0) {
+		static const GTypeInfo info = {
+			sizeof (DbusActionClass),
+			NULL,   /* base_init */
+			NULL,   /* base_finalize */
+		        dbus_action_class_init,   /* class_init */
+			NULL,   /* class_finalize */
+			NULL,   /* class_data */
+			sizeof (DbusAction),
+			0,      /* n_preallocs */
+			dbus_action_instance_init    /* instance_init */
+		};
+		static const GInterfaceInfo iap_info = {
+			(GInterfaceInitFunc) dbus_action_interface_init,    /* interface_init */
+			NULL,               /* interface_finalize */
+			NULL                /* interface_data */
+		};
+
+		type = g_type_register_static (G_TYPE_OBJECT, "DbusAction", &info, 0);
+		g_type_add_interface_static (type, ATOMATO_TYPE_ACTION, &iap_info);
+	}
+
+	return type;
+}
+
+/*
+ * DbusActionProvider class implementation
+ */
 
 static void
 parse_xml_interface (DbusActionProvider *dbus_provider, xmlNodePtr xml_node)
@@ -43,14 +162,15 @@ parse_xml_interface (DbusActionProvider *dbus_provider, xmlNodePtr xml_node)
 	xmlNodePtr subnode, arg_node;
 
 	for (subnode = xml_node->xmlChildrenNode; subnode != NULL; subnode = subnode->next) {
-		AtomatoAction *action;
+		DbusAction *dbus_action;
 
 		if (strcmp ((char *) subnode->name, "method"))
 			continue;
 
-		action = g_new0 (AtomatoAction, 1);
-		action->name = g_strdup (xmlGetProp (subnode, "name"));
+		dbus_action = g_object_new (dbus_action_get_type (), NULL);
+		dbus_action->name = g_strdup (xmlGetProp (subnode, "name"));
 
+		dbus_action->args = NULL;
 		for (arg_node = subnode->xmlChildrenNode; arg_node != NULL;
 		     arg_node = arg_node->next) {
 			AtomatoActionArgument *argument;
@@ -63,10 +183,12 @@ parse_xml_interface (DbusActionProvider *dbus_provider, xmlNodePtr xml_node)
 			//argument->direction = g_strdup (xmlGetProp (arg_node, "direction"));
 			//argument->type = g_strdup (xmlGetProp (arg_node, "type"));
 
-			action->args = g_list_append (action->args, argument);
+			dbus_action->args = g_slist_append (dbus_action->args, argument);
 		}
 
-		g_hash_table_insert (dbus_provider->priv->names, action->name, action);
+		g_hash_table_insert (dbus_provider->priv->names,
+				     g_strdup (dbus_action->name),
+				     dbus_action);
 	}
 }
 
@@ -81,7 +203,9 @@ parse_xml_document (DbusActionProvider *dbus_provider, char *data)
 
 		xml_root = xmlDocGetRootElement (xml_doc);
 		if (!strcmp ((char *) xml_root->name, "node")) {
-			for (xml_node = xml_root->xmlChildrenNode; xml_node != NULL; xml_node = xml_node->next) {
+			for (xml_node = xml_root->xmlChildrenNode;
+			     xml_node != NULL;
+			     xml_node = xml_node->next) {
 				if (strcmp ((char *) xml_node->name, "interface"))
 					continue;
 				parse_xml_interface (dbus_provider, xml_node);
@@ -145,27 +269,32 @@ list_dbus_names (DbusActionProvider *dbus_provider, DBusGProxy *proxy, DBusGConn
 }
 
 static void
-hash_to_slist (gpointer key, gpointer value, gpointer user_data)
+hash_to_slist_cb (gpointer key, gpointer value, gpointer user_data)
 {
 	GSList **list = (GSList **) user_data;
 
 	*list = g_slist_append (*list, value);
 }
 
-static AtomatoMethod
-dbus_action_provider_get_method (AtomatoActionProvider *provider)
+static GSList *
+dbus_action_provider_get_actions (AtomatoActionProvider *provider)
 {
-	g_return_val_if_fail (DBUS_IS_ACTION_PROVIDER (provider), ATOMATO_METHOD_UNKNOWN);
+	DbusActionProvider *dbus_provider = (DbusActionProvider *) provider;
+	GSList *list = NULL;
 
-	return ATOMATO_METHOD_DBUS;
-}
+	if (!dbus_provider->priv->names) {
+		dbus_provider->priv->names = g_hash_table_new_full (g_str_hash,
+								    g_str_equal,
+								    g_free,
+								    g_object_unref);
+		list_dbus_names (dbus_provider,
+				 dbus_provider->priv->session_proxy,
+				 dbus_provider->priv->session_connection);
+	}
 
-static GValueArray *
-dbus_action_provider_run_action (AtomatoActionProvider *provider,
-				 AtomatoAction *action,
-				 const GValueArray *input_args)
-{
-	return NULL;
+	g_hash_table_foreach (dbus_provider->priv->names, (GHFunc) hash_to_slist_cb, &list);
+
+	return list;
 }
 
 static void
@@ -173,8 +302,7 @@ dbus_action_provider_interface_init (gpointer g_iface, gpointer iface_data)
 {
 	AtomatoActionProviderInterface *iface = (AtomatoActionProviderInterface *) g_iface;
 
-	iface->get_method = dbus_action_provider_get_method;
-	iface->run_action = dbus_action_provider_run_action;
+	iface->get_actions = dbus_action_provider_get_actions;
 }
 
 static DBusGProxy *
@@ -203,14 +331,6 @@ dbus_action_provider_instance_init (GTypeInstance *instance, gpointer g_class)
 	provider->priv = g_new0 (DbusActionProviderPrivate, 1);
 
 	/* get DBus connections */
-	/* error = NULL; */
-/* 	if (!(provider->priv->system_connection = dbus_g_bus_get (DBUS_BUS_SYSTEM, &error))) { */
-/* 		g_warning ("Could not get the system bus: %s. Not using system services\n", error->message); */
-/* 		g_error_free (error); */
-/* 	} else { */
-/* 		provider->priv->system_proxy = set_proxy (provider->priv->system_connection); */
-/* 	} */
-
 	error = NULL;
 	if (!(provider->priv->session_connection = dbus_g_bus_get (DBUS_BUS_SESSION, &error))) {
 		g_warning ("Could not get the session bus: %s. Not using session services\n", error->message);
@@ -235,7 +355,7 @@ dbus_action_provider_finalize (GObject *object)
 		provider->priv = NULL;
 	}
 
-	parent_class->finalize (object);
+	provider_parent_class->finalize (object);
 }
 
 static void
@@ -243,7 +363,7 @@ dbus_action_provider_class_init (DbusActionProviderClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	parent_class = g_type_class_ref (G_TYPE_OBJECT);
+	provider_parent_class = g_type_class_ref (G_TYPE_OBJECT);
 
 	object_class->finalize = dbus_action_provider_finalize;
 }

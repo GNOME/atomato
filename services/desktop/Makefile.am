@@ -1,3 +1,4 @@
-actionsdir = $(datadir)/atomato/actions
-actions_DATA = 			\
-	desktop-session.atomato
+shellactionsdir = $(libdir)/atomato/actions/shell
+shellactions_SCRIPTS =			\
+	Desktop.ActivateScreensaver	\
+	Desktop.LockScreen
