@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: atomato\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=atomato&component=general\n"
+"POT-Creation-Date: 2009-05-03 19:39+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: hebrew <he@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Hebrew\n"
+"X-Poedit-Country: ISRAEL\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../src/atomato-gui.glade.h:1
+msgid "GNOME Atomato"
+msgstr "GNOME Atomato"
+
+#: ../src/atomato-gui.glade.h:2
+msgid "_Edit"
+msgstr "_עריכה"
+
+#: ../src/atomato-gui.glade.h:3
+msgid "_File"
+msgstr "_קובץ"
+
+#: ../src/atomato-gui.glade.h:4
+msgid "_Help"
+msgstr "_עזרה"
+
+#: ../src/atomato-gui.glade.h:5
+msgid "_View"
+msgstr "_תצוגה"
+
+#: ../src/main-window.c:90
+msgid "Could not load atomato-gui.glade file"
+msgstr "Could not load atomato-gui.glade file"
+
