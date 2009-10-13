@@ -1,0 +1,42 @@
+# atomato - Latin translation.
+# Copyright (C) 2008, 2009 the author(s) of atomato.
+# This file is distributed under the same license as the atomato package.
+# Jaroslav Ryník <jrynik@yahoo.co.uk>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: atomato\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-10-13 23:43+0200\n"
+"PO-Revision-Date: 2009-08-03 14:01+0200\n"
+"Last-Translator: Jaroslav Ryník <jrynik@yahoo.co.uk>\n"
+"Language-Team: Latin <la@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Latin\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../src/atomato-gui.glade.h:1
+msgid "GNOME Atomato"
+msgstr "GNOME Atomato"
+
+#: ../src/atomato-gui.glade.h:2
+msgid "_Edit"
+msgstr "_Mutare"
+
+#: ../src/atomato-gui.glade.h:3
+msgid "_File"
+msgstr "_Fasciculus"
+
+#: ../src/atomato-gui.glade.h:4
+msgid "_Help"
+msgstr "_Auxilium"
+
+#: ../src/atomato-gui.glade.h:5
+msgid "_View"
+msgstr "_Videre"
+
+#: ../src/main-window.c:90
+msgid "Could not load atomato-gui.glade file"
+msgstr "Fasciculum atomato-gui.glade imponi non potuit"
