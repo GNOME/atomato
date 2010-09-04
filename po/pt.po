@@ -1,0 +1,40 @@
+# atomato's Portuguese translation.
+# Copyright © 2010 atomato
+# This file is distributed under the same license as the atomato package.
+# Marco Oliva <marcooliva@sapo.pt>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: atomato.master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-09-04 16:03+0100\n"
+"PO-Revision-Date: 2010-08-01 19:50+0100\n"
+"Last-Translator: Marco Oliva <marcooliva@sapo.pt>\n"
+"Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/atomato-gui.glade.h:1
+msgid "GNOME Atomato"
+msgstr "GNOME Atomato"
+
+#: ../src/atomato-gui.glade.h:2
+msgid "_Edit"
+msgstr "_Editar"
+
+#: ../src/atomato-gui.glade.h:3
+msgid "_File"
+msgstr "_Ficheiro"
+
+#: ../src/atomato-gui.glade.h:4
+msgid "_Help"
+msgstr "_Ajuda"
+
+#: ../src/atomato-gui.glade.h:5
+msgid "_View"
+msgstr "_Ver"
+
+#: ../src/main-window.c:90
+msgid "Could not load atomato-gui.glade file"
+msgstr "Não foi possível carregar o ficheiro atomato-gui.glade"
