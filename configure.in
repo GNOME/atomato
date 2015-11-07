@@ -1,6 +1,6 @@
 AC_PREREQ(2.59)
 AC_INIT([Atomato], [2.15.1], [http://bugzilla.gnome.org/enter_bug.cgi?product=atomato], [atomato])
-AC_CONFIG_SRCDIR([libatomato/atomato.c])
+AC_CONFIG_SRCDIR([src/main.vala])
 
 dnl Useful to call aclocal after 'make'
 AC_SUBST(ACLOCAL_AMFLAGS, "$ACLOCAL_FLAGS")
@@ -15,6 +15,7 @@ AC_ISC_POSIX
 AC_PROG_CC
 AC_HEADER_STDC([])
 AM_PROG_LIBTOOL
+AM_PROG_VALAC
 
 GNOME_COMPILE_WARNINGS(yes)
 CFLAGS="$CFLAGS $WARN_CFLAGS"
@@ -23,25 +24,18 @@ dnl ******************************************
 dnl ** pkg-config dependacy checks          **
 dnl ******************************************
 
-
-GTK_REQUIRED=2.5.4
-LIBGLADE_REQUIRED=2.0.0
-GCONF_REQUIRED=1.1.11
-DBUS_REQUIRED=0.60
-
-PKG_CHECK_MODULES(ATOMATO, 
-		  glib-2.0       >= $GTK_REQUIRED 
-		  gobject-2.0	 >= $GTK_REQUIRED
-		  libxml-2.0
-		  dbus-glib-1	 >= $DBUS_REQUIRED)
+VALA_CHECK_MODULES(ATOMATO,
+		  glib-2.0
+		  gobject-2.0)
 AC_SUBST(ATOMATO_CFLAGS)
 AC_SUBST(ATOMATO_LIBS)
+AC_SUBST(ATOMATO_VALAFLAGS)
 
-PKG_CHECK_MODULES(ATOMATO_GUI,
-  		  libglade-2.0   >= $LIBGLADE_REQUIRED 
-		  gconf-2.0      >= $GCONF_REQUIRED)
+VALA_CHECK_MODULES(ATOMATO_GUI, gtk+-3.0)
 AC_SUBST(ATOMATO_GUI_CFLAGS)
 AC_SUBST(ATOMATO_GUI_LIBS)
+AC_SUBST(ATOMATO_GUI_VALAFLAGS)
+
 
 dnl
 dnl Translations
@@ -56,12 +50,9 @@ AC_SUBST(CFLAGS)
 AC_SUBST(CPPFLAGS)
 AC_SUBST(LDFLAGS)
 
-GNOME_DOC_INIT
-
 AC_CONFIG_FILES([
 Makefile
 po/Makefile.in
-libatomato/Makefile
 src/Makefile
 services/Makefile
 services/desktop/Makefile

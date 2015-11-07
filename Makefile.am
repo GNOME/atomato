@@ -1,1 +1,1 @@
-SUBDIRS = libatomato src services tests po
+SUBDIRS = src services tests po
