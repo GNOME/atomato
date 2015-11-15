@@ -1,8 +1,8 @@
-/* GNOME Automator
- * Copyright (C) 2006 The GNOME Foundation
+/* GNOME Automation Engine
+ * Copyright (C) 2006-2015 The GNOME Foundation
  *
  * Authors:
- *	 Rodrigo Moya (rodrigo@gnome-db.org)
+ *	 Rodrigo Moya (rodrigo@gnome.org)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -20,19 +20,72 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#include <gtk/gtkmain.h>
-#include "atomato-gui.h"
+using Gtk;
 
-MainWindow *main_window = NULL;
-
-int
-main (int argc, char *argv[])
+namespace Atomato
 {
-	gtk_init (&argc, &argv);
+	public class Application : Gtk.Application
+	{
+		const OptionEntry[] option_entries = {
+            { "version", 'v', 0, OptionArg.NONE, null, N_("Print version information and exit"), null },
+            { null }
+        };
 
-	main_window = main_window_new ();
+        const GLib.ActionEntry[] action_entries = {
+            { "quit", on_quit_activate }
+        };
 
-	gtk_main ();
+		protected override void activate ()
+		{
+            new MainWindow (this);
+        }
 
-	return 0;
+		public static new Application get_default ()
+		{
+            return (Application) GLib.Application.get_default ();
+        }
+
+		protected override void startup ()
+		{
+			base.startup ();
+		}
+
+		protected override int handle_local_options (GLib.VariantDict options)
+		{
+            if (options.contains("version")) {
+                print ("%s %s\n", Environment.get_application_name (), Config.VERSION);
+                return 0;
+            }
+
+            return -1;
+        }
+
+		protected override void shutdown ()
+		{
+			base.shutdown ();
+		}
+
+		public Application ()
+		{
+            Object (application_id: "org.gnome.atomato", flags: ApplicationFlags.HANDLES_OPEN);
+
+            add_main_option_entries (option_entries);
+            add_action_entries (action_entries, this);
+        }
+
+		void on_quit_activate ()
+		{
+			quit ();
+		}
+	}
+
+	public static int main (string[] args)
+	{
+		Intl.bindtextdomain (Config.GETTEXT_PACKAGE, Config.GNOMELOCALEDIR);
+		Intl.bind_textdomain_codeset (Config.GETTEXT_PACKAGE, "UTF-8");
+		Intl.textdomain (Config.GETTEXT_PACKAGE);
+
+		var app = new Atomato.Application ();
+		return app.run ();
+	}
 }
