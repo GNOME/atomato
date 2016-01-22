@@ -26,10 +26,21 @@ namespace Atomato
 {
     public class MainWindow : Gtk.ApplicationWindow
     {
+        Gtk.Paned main_container;
+        Gtk.TreeView library_list;
+
         public MainWindow (Atomato.Application app)
         {
             Object (application: app);
 
+            main_container = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
+            add (main_container);
+
+            library_list = new Gtk.TreeView ();
+            library_list.show ();
+            main_container.add1 (library_list);
+
+            main_container.show ();
             show ();
         }
     }
