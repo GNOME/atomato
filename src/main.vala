@@ -1,5 +1,5 @@
 /* GNOME Automation Engine
- * Copyright (C) 2006-2015 The GNOME Foundation
+ * Copyright (C) 2006-2016 The GNOME Foundation
  *
  * Authors:
  *	 Rodrigo Moya (rodrigo@gnome.org)

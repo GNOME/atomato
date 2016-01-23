@@ -24,26 +24,12 @@ using Gtk;
 
 namespace Atomato
 {
-    public class MainWindow : Gtk.ApplicationWindow
+    public class LibraryList : Gtk.TreeView
     {
-        Gtk.Paned main_container;
-        LibraryList library_list;
-        WorkflowEditor workflow_editor;
-
-        public MainWindow (Atomato.Application app)
+        public LibraryList ()
         {
-            Object (application: app);
+            insert_column_with_attributes (-1, "Action", new Gtk.CellRendererText (), "text", 0);
 
-            main_container = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
-            add (main_container);
-
-            library_list = new LibraryList ();
-            main_container.add1 (library_list);
-
-            workflow_editor = new WorkflowEditor ();
-            main_container.add2 (workflow_editor);
-
-            main_container.show ();
             show ();
         }
     }

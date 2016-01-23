@@ -12,10 +12,12 @@ atomato_VALAFLAGS = \
 	--pkg gio-2.0				\
 	--pkg gio-unix-2.0
 
-atomato_SOURCES = 	\
-	config.vapi		\
-	main.vala		\
-	main-window.vala
+atomato_SOURCES = 			\
+	config.vapi				\
+	library-list.vala		\
+	main.vala				\
+	main-window.vala		\
+	workflow-editor.vala
 
 atomato_LDADD = 				\
 	$(ATOMATO_LIBS)				\
