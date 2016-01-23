@@ -28,6 +28,8 @@ namespace Atomato
     {
         public WorkflowEditor ()
         {
+            Object (orientation: Gtk.Orientation.VERTICAL);
+
             show ();
         }
     }
