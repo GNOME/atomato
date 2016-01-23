@@ -24,27 +24,27 @@ using Gtk;
 
 namespace Atomato
 {
-    public class MainWindow : Gtk.ApplicationWindow
-    {
-        Gtk.Paned main_container;
-        LibraryList library_list;
-        WorkflowEditor workflow_editor;
+	public class MainWindow : Gtk.ApplicationWindow
+	{
+		Gtk.Paned main_container;
+		LibraryList library_list;
+		WorkflowEditor workflow_editor;
 
-        public MainWindow (Atomato.Application app)
-        {
-            Object (application: app);
+		public MainWindow (Atomato.Application app)
+		{
+			Object (application: app);
 
-            main_container = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
-            add (main_container);
+			main_container = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
+			add (main_container);
 
-            library_list = new LibraryList ();
-            main_container.add1 (library_list);
+			library_list = new LibraryList ();
+			main_container.add1 (library_list);
 
-            workflow_editor = new WorkflowEditor ();
-            main_container.add2 (workflow_editor);
+			workflow_editor = new WorkflowEditor ();
+			main_container.add2 (workflow_editor);
 
-            main_container.show ();
-            show ();
-        }
-    }
+			main_container.show ();
+			show ();
+		}
+	}
 }

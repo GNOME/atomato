@@ -27,23 +27,23 @@ namespace Atomato
 	public class Application : Gtk.Application
 	{
 		const OptionEntry[] option_entries = {
-            { "version", 'v', 0, OptionArg.NONE, null, N_("Print version information and exit"), null },
-            { null }
-        };
+			{ "version", 'v', 0, OptionArg.NONE, null, N_("Print version information and exit"), null },
+			{ null }
+		};
 
-        const GLib.ActionEntry[] action_entries = {
-            { "quit", on_quit_activate }
-        };
+		const GLib.ActionEntry[] action_entries = {
+			{ "quit", on_quit_activate }
+		};
 
 		protected override void activate ()
 		{
-            new MainWindow (this);
-        }
+			new MainWindow (this);
+		}
 
 		public static new Application get_default ()
 		{
-            return (Application) GLib.Application.get_default ();
-        }
+			return (Application) GLib.Application.get_default ();
+		}
 
 		protected override void startup ()
 		{
@@ -52,13 +52,13 @@ namespace Atomato
 
 		protected override int handle_local_options (GLib.VariantDict options)
 		{
-            if (options.contains("version")) {
-                print ("%s %s\n", Environment.get_application_name (), Config.VERSION);
-                return 0;
-            }
+			if (options.contains("version")) {
+				print ("%s %s\n", Environment.get_application_name (), Config.VERSION);
+				return 0;
+			}
 
-            return -1;
-        }
+			return -1;
+		}
 
 		protected override void shutdown ()
 		{
@@ -67,11 +67,11 @@ namespace Atomato
 
 		public Application ()
 		{
-            Object (application_id: "org.gnome.atomato", flags: ApplicationFlags.HANDLES_OPEN);
+			Object (application_id: "org.gnome.atomato", flags: ApplicationFlags.HANDLES_OPEN);
 
-            add_main_option_entries (option_entries);
-            add_action_entries (action_entries, this);
-        }
+			add_main_option_entries (option_entries);
+			add_action_entries (action_entries, this);
+		}
 
 		void on_quit_activate ()
 		{

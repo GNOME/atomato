@@ -24,13 +24,13 @@ using Gtk;
 
 namespace Atomato
 {
-    public class WorkflowEditor : Gtk.Box
-    {
-        public WorkflowEditor ()
-        {
-            Object (orientation: Gtk.Orientation.VERTICAL);
+	public class WorkflowEditor : Gtk.Box
+	{
+		public WorkflowEditor ()
+		{
+			Object (orientation: Gtk.Orientation.VERTICAL);
 
-            show ();
-        }
-    }
+			show ();
+		}
+	}
 }

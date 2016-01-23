@@ -24,26 +24,26 @@ using Gtk;
 
 namespace Atomato
 {
-    public class LibraryList : Gtk.Box
-    {
-        Gtk.TreeView library_list;
-        Gtk.TreeView action_list;
+	public class LibraryList : Gtk.Box
+	{
+		Gtk.TreeView library_list;
+		Gtk.TreeView action_list;
 
-        public LibraryList ()
-        {
-            Object (orientation: Gtk.Orientation.HORIZONTAL);
+		public LibraryList ()
+		{
+			Object (orientation: Gtk.Orientation.HORIZONTAL);
 
-            library_list = new Gtk.TreeView ();
-            library_list.insert_column_with_attributes (-1, "Library", new Gtk.CellRendererText (), "text", 0);
-            library_list.show ();
-            pack_start (library_list);
+			library_list = new Gtk.TreeView ();
+			library_list.insert_column_with_attributes (-1, "Library", new Gtk.CellRendererText (), "text", 0);
+			library_list.show ();
+			pack_start (library_list);
 
-            action_list = new Gtk.TreeView ();
-            action_list.insert_column_with_attributes (-1, "Action", new Gtk.CellRendererText (), "text", 0);
-            action_list.show ();
-            pack_start (action_list);
+			action_list = new Gtk.TreeView ();
+			action_list.insert_column_with_attributes (-1, "Action", new Gtk.CellRendererText (), "text", 0);
+			action_list.show ();
+			pack_start (action_list);
 
-            show ();
-        }
-    }
+			show ();
+		}
+	}
 }
