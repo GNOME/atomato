@@ -1,40 +1,42 @@
-# Mario Blättermann <mariobl@gnome.org>, 2008.
+# German translation of atomato.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the atomato package.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2016.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-29 10:56+0100\n"
-"PO-Revision-Date: 2008-11-29 10:59+0100\n"
-"Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
+"Project-Id-Version: atomato master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=atomato&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-02-04 18:01+0000\n"
+"PO-Revision-Date: 2016-02-05 14:52+0100\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail."
+"com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: German\n"
-"X-Poedit-Country: GERMANY\n"
+"X-Generator: Poedit 1.8.6\n"
 
-#: ../src/atomato-gui.glade.h:1
-msgid "GNOME Atomato"
-msgstr "GNOME Atomato"
+#: ../src/main.vala:30
+msgid "Print version information and exit"
+msgstr "Versionsinformationen anzeigen und beenden"
 
-#: ../src/atomato-gui.glade.h:2
-msgid "_Edit"
-msgstr "_Bearbeiten"
+#~ msgid "GNOME Atomato"
+#~ msgstr "GNOME Atomato"
 
-#: ../src/atomato-gui.glade.h:3
-msgid "_File"
-msgstr "_Datei"
+#~ msgid "_Edit"
+#~ msgstr "_Bearbeiten"
 
-#: ../src/atomato-gui.glade.h:4
-msgid "_Help"
-msgstr "_Hilfe"
+#~ msgid "_File"
+#~ msgstr "_Datei"
 
-#: ../src/atomato-gui.glade.h:5
-msgid "_View"
-msgstr "_Ansicht"
+#~ msgid "_Help"
+#~ msgstr "_Hilfe"
 
-#: ../src/main-window.c:87
-msgid "Could not load atomato-gui.glade file"
-msgstr "Datei atomato-gui.glade konnte nicht geladen werden"
+#~ msgid "_View"
+#~ msgstr "_Ansicht"
 
+#~ msgid "Could not load atomato-gui.glade file"
+#~ msgstr "Datei atomato-gui.glade konnte nicht geladen werden"
