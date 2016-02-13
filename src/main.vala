@@ -52,7 +52,7 @@ namespace Atomato
 
 		protected override int handle_local_options (GLib.VariantDict options)
 		{
-			if (options.contains("version")) {
+			if (options.contains ("version")) {
 				print ("%s %s\n", Environment.get_application_name (), Config.VERSION);
 				return 0;
 			}
