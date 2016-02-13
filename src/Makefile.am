@@ -1,3 +1,5 @@
+SUBDIRS = engine
+
 AM_CPPFLAGS = \
 	-DGETTEXT_PACKAGE=\""$(GETTEXT_PACKAGE)"\"  \
 	-DGNOMELOCALEDIR=\""$(localedir)"\" 	    \

@@ -47,7 +47,7 @@ namespace Atomato.Engine
                 result = action.run (action_args);
                 if (result == null || !result.was_successful) {
                     // If one action fails, stop
-                    stdout.printf ("Action %s failed\n", action.name);
+                    stdout.printf ("Action %s failed with %s\n", action.name, result.error_message);
                     break;
                 }
 
