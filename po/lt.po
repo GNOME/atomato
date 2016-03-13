@@ -6,36 +6,36 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: atomato.HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-21 13:33+0200\n"
-"PO-Revision-Date: 2007-03-20 19:29+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=atomato&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-02-14 15:57+0000\n"
+"PO-Revision-Date: 2016-02-14 20:00+0200\n"
 "Last-Translator: Vytautas Povilaitis <punktyras@nkm.lt>\n"
 "Language-Team: Lithuanian <en@li.org>\n"
+"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Poedit 1.8.7\n"
 
-#: ../src/gnome-automator.glade.h:1
-msgid "GNOME Automator"
-msgstr "GNOME Automatizatorius"
+#: ../src/main.vala:30
+msgid "Print version information and exit"
+msgstr "Parodyti versijos informaciją ir išeiti"
 
-#: ../src/gnome-automator.glade.h:2
-msgid "_About"
-msgstr "_Apie"
+#~ msgid "GNOME Automator"
+#~ msgstr "GNOME Automatizatorius"
 
-#: ../src/gnome-automator.glade.h:3
-msgid "_Edit"
-msgstr "_Taisyti"
+#~ msgid "_About"
+#~ msgstr "_Apie"
 
-#: ../src/gnome-automator.glade.h:4
-msgid "_File"
-msgstr "_Failas"
+#~ msgid "_Edit"
+#~ msgstr "_Taisyti"
 
-#: ../src/gnome-automator.glade.h:5
-msgid "_Help"
-msgstr "_Pagalba"
+#~ msgid "_File"
+#~ msgstr "_Failas"
 
-#: ../src/gnome-automator.glade.h:6
-msgid "_View"
-msgstr "_Vaizdas"
+#~ msgid "_Help"
+#~ msgstr "_Pagalba"
+
+#~ msgid "_View"
+#~ msgstr "_Vaizdas"
