@@ -2,42 +2,41 @@
 # Occitan translation of atomato.
 # Copyright (C) 2006-2007 Free Software Foundation, Inc.
 # This file is distributed under the same license as the atomato package.
-#
 # Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, 2006-2008
+# Cédric VALMARY <cvalmary@yahoo.fr>, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: oc\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-02 08:55+0200\n"
-"PO-Revision-Date: 2007-11-20 14:29+0100\n"
-"Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
-"Language-Team: Occitan <ubuntu-l10n-oci@lists.ubuntu.com>\n"
+"POT-Creation-Date: 2016-08-19 13:34+0000\n"
+"PO-Revision-Date: 2016-10-03 09:59+0200\n"
+"Last-Translator: Cédric VALMARY <cvalmary@yahoo.fr>\n"
+"Language-Team: Tot en òc (totenoc.eu)\n"
 "Language: oc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
 
-#: ../src/atomato-gui.glade.h:1
-msgid "GNOME Atomato"
-msgstr "GNOME Atomato"
+#: ../src/main.vala:30
+msgid "Print version information and exit"
+msgstr "Afichar l'informacion sur la version e quitar"
 
-#: ../src/atomato-gui.glade.h:2
-msgid "_Edit"
-msgstr "_Edicion"
+#~ msgid "GNOME Atomato"
+#~ msgstr "GNOME Atomato"
 
-#: ../src/atomato-gui.glade.h:3
-msgid "_File"
-msgstr "_Fichièr"
+#~ msgid "_Edit"
+#~ msgstr "E_dicion"
 
-#: ../src/atomato-gui.glade.h:4
-msgid "_Help"
-msgstr "_Ajuda"
+#~ msgid "_File"
+#~ msgstr "_Fichièr"
 
-#: ../src/atomato-gui.glade.h:5
-msgid "_View"
-msgstr "_Visualizacion"
+#~ msgid "_Help"
+#~ msgstr "A_juda"
 
-#: ../src/main-window.c:87
-msgid "Could not load atomato-gui.glade file"
-msgstr "Impossible de cargar lo fichièr atomato-gui.glade"
+#~ msgid "_View"
+#~ msgstr "_Afichatge"
+
+#~ msgid "Could not load atomato-gui.glade file"
+#~ msgstr "Impossible de cargar lo fichièr atomato-gui.glade"
