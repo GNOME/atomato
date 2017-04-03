@@ -8,38 +8,36 @@ msgstr ""
 "Project-Id-Version: Atomato\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=atomato&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-09-27 20:46+0000\n"
-"PO-Revision-Date: 2013-12-17 23:29+0400\n"
-"Last-Translator: Yuri Myasoedov <ymyasoedov@yandex.ru>\n"
+"POT-Creation-Date: 2016-02-04 18:01+0000\n"
+"PO-Revision-Date: 2016-11-03 10:35+0300\n"
+"Last-Translator: Aleksey Kabanov <ak099@mail.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.6.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../src/atomato-gui.glade.h:1
-msgid "GNOME Atomato"
-msgstr "GNOME Atomato"
+#: ../src/main.vala:30
+msgid "Print version information and exit"
+msgstr "Вывести информацию о версии и выйти"
 
-#: ../src/atomato-gui.glade.h:2
-msgid "_File"
-msgstr "_Файл"
+#~ msgid "GNOME Atomato"
+#~ msgstr "GNOME Atomato"
 
-#: ../src/atomato-gui.glade.h:3
-msgid "_Edit"
-msgstr "_Правка"
+#~ msgid "_File"
+#~ msgstr "_Файл"
 
-#: ../src/atomato-gui.glade.h:4
-msgid "_View"
-msgstr "_Вид"
+#~ msgid "_Edit"
+#~ msgstr "_Правка"
 
-#: ../src/atomato-gui.glade.h:5
-msgid "_Help"
-msgstr "_Справка"
+#~ msgid "_View"
+#~ msgstr "_Вид"
 
-#: ../src/main-window.c:90
-msgid "Could not load atomato-gui.glade file"
-msgstr "Не удалось загрузить файл atomato-gui.glade"
+#~ msgid "_Help"
+#~ msgstr "_Справка"
+
+#~ msgid "Could not load atomato-gui.glade file"
+#~ msgstr "Не удалось загрузить файл atomato-gui.glade"
