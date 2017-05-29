@@ -8,40 +8,38 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Atomato\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-19 14:46+0100\n"
-"PO-Revision-Date: 2008-02-19 14:47+0100\n"
+"POT-Creation-Date: 2017-04-03 19:17+0000\n"
+"PO-Revision-Date: 2017-05-20 16:37+0200\n"
 "Last-Translator: Jordi Sayol Salomó <jordisayol@gmail.com>\n"
 "Language-Team: Softcatalà <tradgnome@softcatala.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Catalan\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
-#: ../src/atomato-gui.glade.h:1
-msgid "GNOME Atomato"
-msgstr "Automator de GNOME"
+#: ../src/main.vala:30
+msgid "Print version information and exit"
+msgstr "Imprimeix informació de la versió i surt"
 
-#: ../src/atomato-gui.glade.h:2
-msgid "_Edit"
-msgstr "_Edita"
+#~ msgid "GNOME Atomato"
+#~ msgstr "Automator de GNOME"
 
-#: ../src/atomato-gui.glade.h:3
-msgid "_File"
-msgstr "_Fitxer"
+#~ msgid "_Edit"
+#~ msgstr "_Edita"
 
-#: ../src/atomato-gui.glade.h:4
-msgid "_Help"
-msgstr "A_juda"
+#~ msgid "_File"
+#~ msgstr "_Fitxer"
 
-#: ../src/atomato-gui.glade.h:5
-msgid "_View"
-msgstr "_Visualitza"
+#~ msgid "_Help"
+#~ msgstr "A_juda"
 
-#: ../src/main-window.c:87
-msgid "Could not load atomato-gui.glade file"
-msgstr "No s'ha pogut carregar el fitxer atomato-gui.glade"
+#~ msgid "_View"
+#~ msgstr "_Visualitza"
+
+#~ msgid "Could not load atomato-gui.glade file"
+#~ msgstr "No s'ha pogut carregar el fitxer atomato-gui.glade"
 
 #~ msgid "_About"
 #~ msgstr "_Quant a"
