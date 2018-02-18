@@ -1,41 +1,41 @@
 # Atomato, Dutch translation
 # This file is distributed under the same license as the atomato package.
 #
-# Wouter Bolsterlee <wbolster@gnome.org>, 2006"
+# Wouter Bolsterlee <wbolster@gnome.org>, 2006
+# Nathan Follens <nthn@unseen.is>, 2017
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: atomato\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-10-27 14:55+0200\n"
-"PO-Revision-Date: 2006-10-27 14:55+0200 \n"
-"Last-Translator: Wouter Bolsterlee <wbolster@gnome.org>\n"
+"POT-Creation-Date: 2017-04-03 19:17+0000\n"
+"PO-Revision-Date: 2017-09-11 00:30+0200\n"
+"Last-Translator: Nathan Follens <nthn@unseen.is>\n"
 "Language-Team: Gnome-NL <gnome-nl-list@gnome.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
 
-#: ../src/gnome-automator.glade.h:1
-msgid "GNOME Automator"
-msgstr "Gnome Automator"
+#: ../src/main.vala:30
+msgid "Print version information and exit"
+msgstr "Versie-informatie tonen en afsluiten"
 
-#: ../src/gnome-automator.glade.h:2
-msgid "_About"
-msgstr "In_fo"
+#~ msgid "GNOME Automator"
+#~ msgstr "Gnome Automator"
 
-#: ../src/gnome-automator.glade.h:3
-msgid "_Edit"
-msgstr "Be_werken"
+#~ msgid "_About"
+#~ msgstr "In_fo"
 
-#: ../src/gnome-automator.glade.h:4
-msgid "_File"
-msgstr "_Bestand"
+#~ msgid "_Edit"
+#~ msgstr "Be_werken"
 
-#: ../src/gnome-automator.glade.h:5
-msgid "_Help"
-msgstr "_Hulp"
+#~ msgid "_File"
+#~ msgstr "_Bestand"
 
-#: ../src/gnome-automator.glade.h:6
-msgid "_View"
-msgstr "Beel_d"
+#~ msgid "_Help"
+#~ msgstr "_Hulp"
+
+#~ msgid "_View"
+#~ msgstr "Beel_d"
