@@ -4,39 +4,38 @@
 # Adi Roiban https://launchpad.net/~adiroiban, 2009
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=atomato&amp;component=general\n"
-"POT-Creation-Date: 2008-11-29 10:09+0000\n"
-"PO-Revision-Date: 2009-03-02 21:10+0200\n"
-"Last-Translator: Adi Roiban <adi@roiban.ro>\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-03 19:17+0000\n"
+"PO-Revision-Date: 2018-04-05 17:44+0300\n"
+"Last-Translator: Florentina Mușat <florentina.musat.28@gmail.com>\n"
 "Language-Team: Gnome Romanian Team <gnomero-list@lists.sourceforge.net>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3;plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1))\n"
+"Plural-Forms: nplurals=3;plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
+"2:1));\n"
+"X-Generator: Poedit 2.0.6\n"
 
-#: ../src/atomato-gui.glade.h:1
-msgid "GNOME Atomato"
-msgstr "GNOME Atomato"
+#: ../src/main.vala:30
+msgid "Print version information and exit"
+msgstr "Tipărește informațiile de versiune și ieși"
 
-#: ../src/atomato-gui.glade.h:2
-msgid "_Edit"
-msgstr "_Editare"
+#~ msgid "GNOME Atomato"
+#~ msgstr "GNOME Atomato"
 
-#: ../src/atomato-gui.glade.h:3
-msgid "_File"
-msgstr "_Fișier"
+#~ msgid "_Edit"
+#~ msgstr "_Editare"
 
-#: ../src/atomato-gui.glade.h:4
-msgid "_Help"
-msgstr "_Ajutor"
+#~ msgid "_File"
+#~ msgstr "_Fișier"
 
-#: ../src/atomato-gui.glade.h:5
-msgid "_View"
-msgstr "_Vizualizare"
+#~ msgid "_Help"
+#~ msgstr "_Ajutor"
 
-#: ../src/main-window.c:87
-msgid "Could not load atomato-gui.glade file"
-msgstr "Nu s-a putut încărca fișierul atomato-gui.glade"
+#~ msgid "_View"
+#~ msgstr "_Vizualizare"
 
+#~ msgid "Could not load atomato-gui.glade file"
+#~ msgstr "Nu s-a putut încărca fișierul atomato-gui.glade"
