@@ -6,10 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: atomato\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=atomato&component=general\n"
-"POT-Creation-Date: 2009-12-16 16:52+0000\n"
-"PO-Revision-Date: 2010-02-22 21:48+0800\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/atomato/issues\n"
+"POT-Creation-Date: 2020-03-31 19:15+0000\n"
+"PO-Revision-Date: 2020-08-29 21:02-0400\n"
 "Last-Translator: YunQiang Su <wzssyqa@gmail.com>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
 "Language: zh_CN\n"
@@ -17,30 +16,29 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.4.1\n"
 
-#: ../src/atomato-gui.glade.h:1
-msgid "GNOME Atomato"
-msgstr "GNOME Atomato"
+#: ../src/main.vala:30
+msgid "Print version information and exit"
+msgstr "打印版本信息并退出"
 
-#: ../src/atomato-gui.glade.h:2
-msgid "_Edit"
-msgstr "编辑(_E)"
+#~ msgid "GNOME Atomato"
+#~ msgstr "GNOME Atomato"
 
-#: ../src/atomato-gui.glade.h:3
-msgid "_File"
-msgstr "文件(_F)"
+#~ msgid "_Edit"
+#~ msgstr "编辑(_E)"
 
-#: ../src/atomato-gui.glade.h:4
-msgid "_Help"
-msgstr "帮助(_H)"
+#~ msgid "_File"
+#~ msgstr "文件(_F)"
 
-#: ../src/atomato-gui.glade.h:5
-msgid "_View"
-msgstr "查看(_V)"
+#~ msgid "_Help"
+#~ msgstr "帮助(_H)"
 
-#: ../src/main-window.c:90
-msgid "Could not load atomato-gui.glade file"
-msgstr "无法加载 atomato-gui.glade 文件"
+#~ msgid "_View"
+#~ msgstr "查看(_V)"
+
+#~ msgid "Could not load atomato-gui.glade file"
+#~ msgstr "无法加载 atomato-gui.glade 文件"
 
 #~ msgid "_About"
 #~ msgstr "关于(_A)"
