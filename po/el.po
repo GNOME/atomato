@@ -2,42 +2,40 @@
 # Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # elias <pkst@gmome.org>, 2008.
-# 
-# 
+#
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: atomato.HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-23 20:10+0200\n"
-"PO-Revision-Date: 2008-03-23 20:11+0200\n"
-"Last-Translator: elias <pkst@gmome.org>\n"
-"Language-Team:  <el@li.org>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/atomato/issues\n"
+"POT-Creation-Date: 2020-08-30 01:03+0000\n"
+"PO-Revision-Date: 2020-10-01 01:56+0300\n"
+"Last-Translator: Efstathios Iosifidis <eiosifidis@gnome.org>\n"
+"Language-Team: <el@li.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
 
-#: ../src/atomato-gui.glade.h:1
-msgid "GNOME Atomato"
-msgstr "GNOME Atomato"
+#: ../src/main.vala:30
+msgid "Print version information and exit"
+msgstr "Προβολή πληροφοριών έκδοσης και έξοδος"
 
-#: ../src/atomato-gui.glade.h:2
-msgid "_Edit"
-msgstr "_Επεξεργασία"
+#~ msgid "GNOME Atomato"
+#~ msgstr "GNOME Atomato"
 
-#: ../src/atomato-gui.glade.h:3
-msgid "_File"
-msgstr "_Αρχείο"
+#~ msgid "_Edit"
+#~ msgstr "_Επεξεργασία"
 
-#: ../src/atomato-gui.glade.h:4
-msgid "_Help"
-msgstr "_Βοήθεια"
+#~ msgid "_File"
+#~ msgstr "_Αρχείο"
 
-#: ../src/atomato-gui.glade.h:5
-msgid "_View"
-msgstr "_Προβολή"
+#~ msgid "_Help"
+#~ msgstr "_Βοήθεια"
 
-#: ../src/main-window.c:87
-msgid "Could not load atomato-gui.glade file"
-msgstr "Αδυναμία φόρτωσης του atomato-gui.glade"
+#~ msgid "_View"
+#~ msgstr "_Προβολή"
 
+#~ msgid "Could not load atomato-gui.glade file"
+#~ msgstr "Αδυναμία φόρτωσης του atomato-gui.glade"
